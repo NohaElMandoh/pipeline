@@ -1,0 +1,29 @@
+git init
+
+git status
+
+git add .
+
+git add README.md
+git commit -m "first commit"
+
+git remote add origin https://alihosny_cs@bitbucket.org/khaliltheplatform/nakheelfrontend_webcode.git
+
+git push -u origin master
+
+
+===========================
+chmod -R 775 storage
+
+And try to clear all cache:
+//===========================cache problem
+
+php artisan cache:clear
+
+php artisan route:clear
+
+php artisan config:clear
+
+php artisan view:clear
+
+php artisan clear-compiled

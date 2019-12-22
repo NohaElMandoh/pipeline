@@ -1,0 +1,2352 @@
+{
+	"info": {
+		"_postman_id": "fc2b090f-90f5-424c-8b72-9066438b18e2",
+		"name": "conan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "server",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "salma@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "VpkTtQe71mg2Cioua0Igr4KVUzeCGLNGsNMX2KQA",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://alsayershop.com/api/login",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mahmoud@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "01011279823",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "female",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "VpkTtQe71mg2Cioua0Igr4KVUzeCGLNGsNMX2KQA",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "emy",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://alsayershop.com/api/register",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNhYjNhNGZmYWUwYjFmOWZiOWM5MTllOTNkYjY1ZGI0MGRiNDYzNWM0NjYxNmEyZWVlMTgyOTg1ZTJiN2I2ZjY4NWYxZDQzOWNiMTg1MjA3In0.eyJhdWQiOiIyIiwianRpIjoiY2FiM2E0ZmZhZTBiMWY5ZmI5YzkxOWU5M2RiNjVkYjQwZGI0NjM1YzQ2NjE2YTJlZWUxODI5ODVlMmI3YjZmNjg1ZjFkNDM5Y2IxODUyMDciLCJpYXQiOjE1NTcwNjgzNTUsIm5iZiI6MTU1NzA2ODM1NSwiZXhwIjoxNTU4MzY0MzU1LCJzdWIiOiIxODIiLCJzY29wZXMiOltdfQ.E_S9C6w1Cs3fD_udB9UsTRxTqAb06vIKAdIdotZwVVQmMBEopZngROTXd6LSSro7cqgbs2CV3kRrwUVotXG0Q6MguDBcbNFCWzMAXJqevzkJX8DjfK4zUtTwegyasd-ZcOH9HJnBX5e5KIgMRpagOZRMESmz6-h90VaM7CnVksQAlhShoSPeIMLGxaDiqRLNPZv2ms-nBDvyNcMGGKkwS7G8OHSjJmGvX6GasXUfUI9kEZbq6pAoO-X_kLgXIAMnZ91IuDCqF06c7h38aJp7GefKpOeZ6kZU10DMMWsRlM-pJduUiefjV4x7sjggHf1N9PY1cG1lrP2359mK8tMVOX9tVOlLauskHuP-lV4ghkW45r9J3-IwqcyObF3jAbaZht4bSNiYKYxSPIwS-G4MhWzcov1lTzvshbbxN3ICWCMGrO5LbKuMQe5soS1ZsOw5jTn5wzpHFDz8CnrkNSxnm3zYSPFj_eqgK2aC5MRPY9thOiGaDJ7QYYWIQJTjpqaxHjC7ufRngYisXrstTAUgGE4G71AxgWGCgj9S3n1y4gvxVAX5rmOzbdOv8ja7bS63axWYU5yqfQI-FPRi18UguC3pyQ_cwkQ1GWgw5K8uc_Sz5dUXbFYi_7xNJEe4qVx3uAufPqIu9YVH_asEUV-0JOFtorrm9OMj6wTUDW15XcE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://alsayershop.com/api/add_cart",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"add_cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_cart",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNhYjNhNGZmYWUwYjFmOWZiOWM5MTllOTNkYjY1ZGI0MGRiNDYzNWM0NjYxNmEyZWVlMTgyOTg1ZTJiN2I2ZjY4NWYxZDQzOWNiMTg1MjA3In0.eyJhdWQiOiIyIiwianRpIjoiY2FiM2E0ZmZhZTBiMWY5ZmI5YzkxOWU5M2RiNjVkYjQwZGI0NjM1YzQ2NjE2YTJlZWUxODI5ODVlMmI3YjZmNjg1ZjFkNDM5Y2IxODUyMDciLCJpYXQiOjE1NTcwNjgzNTUsIm5iZiI6MTU1NzA2ODM1NSwiZXhwIjoxNTU4MzY0MzU1LCJzdWIiOiIxODIiLCJzY29wZXMiOltdfQ.E_S9C6w1Cs3fD_udB9UsTRxTqAb06vIKAdIdotZwVVQmMBEopZngROTXd6LSSro7cqgbs2CV3kRrwUVotXG0Q6MguDBcbNFCWzMAXJqevzkJX8DjfK4zUtTwegyasd-ZcOH9HJnBX5e5KIgMRpagOZRMESmz6-h90VaM7CnVksQAlhShoSPeIMLGxaDiqRLNPZv2ms-nBDvyNcMGGKkwS7G8OHSjJmGvX6GasXUfUI9kEZbq6pAoO-X_kLgXIAMnZ91IuDCqF06c7h38aJp7GefKpOeZ6kZU10DMMWsRlM-pJduUiefjV4x7sjggHf1N9PY1cG1lrP2359mK8tMVOX9tVOlLauskHuP-lV4ghkW45r9J3-IwqcyObF3jAbaZht4bSNiYKYxSPIwS-G4MhWzcov1lTzvshbbxN3ICWCMGrO5LbKuMQe5soS1ZsOw5jTn5wzpHFDz8CnrkNSxnm3zYSPFj_eqgK2aC5MRPY9thOiGaDJ7QYYWIQJTjpqaxHjC7ufRngYisXrstTAUgGE4G71AxgWGCgj9S3n1y4gvxVAX5rmOzbdOv8ja7bS63axWYU5yqfQI-FPRi18UguC3pyQ_cwkQ1GWgw5K8uc_Sz5dUXbFYi_7xNJEe4qVx3uAufPqIu9YVH_asEUV-0JOFtorrm9OMj6wTUDW15XcE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg2ZGFkYjNjMGJmNDA5MjY3OWFkYTE0YTQwNGFkYWVmYWRiOTEyYzQ0OTg5YjFmYmE3NjBmMzZmMTM4OGFhMDgzOGNmYzlmZDA0ZTUzYzllIn0.eyJhdWQiOiIyIiwianRpIjoiODZkYWRiM2MwYmY0MDkyNjc5YWRhMTRhNDA0YWRhZWZhZGI5MTJjNDQ5ODliMWZiYTc2MGYzNmYxMzg4YWEwODM4Y2ZjOWZkMDRlNTNjOWUiLCJpYXQiOjE1NTcwNjU4NTQsIm5iZiI6MTU1NzA2NTg1NCwiZXhwIjoxNTU4MzYxODU0LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.QrnXHDrLHkpqLmZk5Hofm3AKVD_nVh1iuUgMzGAIGWZE268TWavyqRmEDVgjaXr9LoXYER4YTY0awwXb7fmH0nBnv98hRPMxhXuIIae59EP3Qoho-qzouiL8i9DJdawZMgtq1_xSCEHK6F5A1jh91cPQpf9i02lkNDKCOmUrII77TRM-Elvu4VEybBoQWZPabckDVdCpAfEunW_3Drndz6zuf29b_Lh79o4-Uym2N8RPb4hn36Xam09OhF4m0f9liNyfWPfxF_MILzkhcI9GaMhIHejxN2psy7w7IT9IOxEF2Op-YmxBbeDrL3h1xLoVe7QGdpxC-mHGbDyFvoGRNn5SmR46pibuAMH8vrrhRt7OFI0IxgkzBe3Z6WGGtiRaR7Podvem1JfbD1ncSRiROyENrZ4AAJFLSivSVG_Eyd7Nqm8nQW0NuzuggQXKGRx4rdW_pK850GhiwRNKY_-ShcifWYONdgnpeu9wS1gqXn-xp6IyQ3g9c3hfmlP1fpVaMcUK-s37nqjsZYJ5HKAWfl8g3ItkrID-g9TsH1eQLIkoMGQXJJfYGjP5r40aU3zZYABqjRuutoDadGvgNnc_XSh6hiz8f65HmdV-UkILUgI7u633IyKJ3ucHNyrF9_5yf4pgtgW7QzK5HdVNKrYf_nFHhlcvk4nHhfi5l4w89no",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://alsayershop.com/api/show_cart",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"show_cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove_cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImU1Yzk3ZDkwYmFiNzNlYTU5ZTljZjAyYjYzYTZjNzkyNjMwYTZlNWZkNTliMmU5ZGNmNGFhYmIzMWExMDYwZjZhNzMzZTBhMjc1MGM2ZmE1In0.eyJhdWQiOiIyIiwianRpIjoiZTVjOTdkOTBiYWI3M2VhNTllOWNmMDJiNjNhNmM3OTI2MzBhNmU1ZmQ1OWIyZTlkY2Y0YWFiYjMxYTEwNjBmNmE3MzNlMGEyNzUwYzZmYTUiLCJpYXQiOjE1NTcwNjU0ODksIm5iZiI6MTU1NzA2NTQ4OSwiZXhwIjoxNTU4MzYxNDg4LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.aEFQHvp5S2w05x5ly1zLBammWu1OflKMQzU570yCVtFgyOwmBMCUiqgQaao6sDkSJBx1lq2g7iUCxLUfw2GB3sOoLe099KJDtK7vl9IYmidW7Qckfu7C22L_r6eLHJk_71wqynZtXwslXO0zyj1yOZ5lJ06M8h2dFqFf9m6WGwcHCiyQRWGwzduoX_pBqmu3rertVjCNrBmZ7yHa7w16IuJ6iIaz3A1YDbEJlO0uNdHy6-jdqkO3efiQfev6c11Z33wVXpMT9rw0iOWF-p9YGLcLmop70xGh9sMYnFIYXncYbKdtm-V3o9-8murhCHi7dm2C_ZjfOYBaeiglz2AyDVrIKMp_SNuAVS4EbvL0KjOEjm5QB698aZo3kKYpS574XiiIdEjnzZ5BWTI8CCn3wkg6VgO0pc97z87oL7wDBcpPRZqUIXPUJIm18h0W4fkmlr9QFYqELTQ7C7NT84urKdBPo4Oyy1eAElSLkNzMB7JdPNDMSISasX-7EcONyrH3mTAu160Wb2H8XXF76D6TVGuKNoeAFEDSbLy0FZsY4OvOHX4ndxRSmwNGAbLask0LKdMHdOcpCC0I5x93FXeBskbYAE1FgXnVJwSi4sHjdABSIZ1WGrlHofomQ-NcD-hhW9DK-hlIvyCoZZDCmFlA4cO--38QukPWDdyezasHbCs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cart_id",
+									"value": "611",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://alsayershop.com/api/remove_cart",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"remove_cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNhYjNhNGZmYWUwYjFmOWZiOWM5MTllOTNkYjY1ZGI0MGRiNDYzNWM0NjYxNmEyZWVlMTgyOTg1ZTJiN2I2ZjY4NWYxZDQzOWNiMTg1MjA3In0.eyJhdWQiOiIyIiwianRpIjoiY2FiM2E0ZmZhZTBiMWY5ZmI5YzkxOWU5M2RiNjVkYjQwZGI0NjM1YzQ2NjE2YTJlZWUxODI5ODVlMmI3YjZmNjg1ZjFkNDM5Y2IxODUyMDciLCJpYXQiOjE1NTcwNjgzNTUsIm5iZiI6MTU1NzA2ODM1NSwiZXhwIjoxNTU4MzY0MzU1LCJzdWIiOiIxODIiLCJzY29wZXMiOltdfQ.E_S9C6w1Cs3fD_udB9UsTRxTqAb06vIKAdIdotZwVVQmMBEopZngROTXd6LSSro7cqgbs2CV3kRrwUVotXG0Q6MguDBcbNFCWzMAXJqevzkJX8DjfK4zUtTwegyasd-ZcOH9HJnBX5e5KIgMRpagOZRMESmz6-h90VaM7CnVksQAlhShoSPeIMLGxaDiqRLNPZv2ms-nBDvyNcMGGKkwS7G8OHSjJmGvX6GasXUfUI9kEZbq6pAoO-X_kLgXIAMnZ91IuDCqF06c7h38aJp7GefKpOeZ6kZU10DMMWsRlM-pJduUiefjV4x7sjggHf1N9PY1cG1lrP2359mK8tMVOX9tVOlLauskHuP-lV4ghkW45r9J3-IwqcyObF3jAbaZht4bSNiYKYxSPIwS-G4MhWzcov1lTzvshbbxN3ICWCMGrO5LbKuMQe5soS1ZsOw5jTn5wzpHFDz8CnrkNSxnm3zYSPFj_eqgK2aC5MRPY9thOiGaDJ7QYYWIQJTjpqaxHjC7ufRngYisXrstTAUgGE4G71AxgWGCgj9S3n1y4gvxVAX5rmOzbdOv8ja7bS63axWYU5yqfQI-FPRi18UguC3pyQ_cwkQ1GWgw5K8uc_Sz5dUXbFYi_7xNJEe4qVx3uAufPqIu9YVH_asEUV-0JOFtorrm9OMj6wTUDW15XcE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "615",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://alsayershop.com/api/update_cart",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"update_cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clear_cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNhYjNhNGZmYWUwYjFmOWZiOWM5MTllOTNkYjY1ZGI0MGRiNDYzNWM0NjYxNmEyZWVlMTgyOTg1ZTJiN2I2ZjY4NWYxZDQzOWNiMTg1MjA3In0.eyJhdWQiOiIyIiwianRpIjoiY2FiM2E0ZmZhZTBiMWY5ZmI5YzkxOWU5M2RiNjVkYjQwZGI0NjM1YzQ2NjE2YTJlZWUxODI5ODVlMmI3YjZmNjg1ZjFkNDM5Y2IxODUyMDciLCJpYXQiOjE1NTcwNjgzNTUsIm5iZiI6MTU1NzA2ODM1NSwiZXhwIjoxNTU4MzY0MzU1LCJzdWIiOiIxODIiLCJzY29wZXMiOltdfQ.E_S9C6w1Cs3fD_udB9UsTRxTqAb06vIKAdIdotZwVVQmMBEopZngROTXd6LSSro7cqgbs2CV3kRrwUVotXG0Q6MguDBcbNFCWzMAXJqevzkJX8DjfK4zUtTwegyasd-ZcOH9HJnBX5e5KIgMRpagOZRMESmz6-h90VaM7CnVksQAlhShoSPeIMLGxaDiqRLNPZv2ms-nBDvyNcMGGKkwS7G8OHSjJmGvX6GasXUfUI9kEZbq6pAoO-X_kLgXIAMnZ91IuDCqF06c7h38aJp7GefKpOeZ6kZU10DMMWsRlM-pJduUiefjV4x7sjggHf1N9PY1cG1lrP2359mK8tMVOX9tVOlLauskHuP-lV4ghkW45r9J3-IwqcyObF3jAbaZht4bSNiYKYxSPIwS-G4MhWzcov1lTzvshbbxN3ICWCMGrO5LbKuMQe5soS1ZsOw5jTn5wzpHFDz8CnrkNSxnm3zYSPFj_eqgK2aC5MRPY9thOiGaDJ7QYYWIQJTjpqaxHjC7ufRngYisXrstTAUgGE4G71AxgWGCgj9S3n1y4gvxVAX5rmOzbdOv8ja7bS63axWYU5yqfQI-FPRi18UguC3pyQ_cwkQ1GWgw5K8uc_Sz5dUXbFYi_7xNJEe4qVx3uAufPqIu9YVH_asEUV-0JOFtorrm9OMj6wTUDW15XcE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://alsayershop.com/api/clear_cart",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"clear_cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZlNDM2YTc2ZGM2OWQ0ZmE4YjdkYjEzYWU5ZDdhMjQzOTNlNmU3NjBiMGMxYTg3MDBmNzE2YjIyZGI4YmVkZDU3ZGIyMWRjZWZjNDM5NjE2In0.eyJhdWQiOiIyIiwianRpIjoiZmU0MzZhNzZkYzY5ZDRmYThiN2RiMTNhZTlkN2EyNDM5M2U2ZTc2MGIwYzFhODcwMGY3MTZiMjJkYjhiZWRkNTdkYjIxZGNlZmM0Mzk2MTYiLCJpYXQiOjE1NTcxMzA0MTQsIm5iZiI6MTU1NzEzMDQxNCwiZXhwIjoxNTU4NDI2NDE0LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.MCx4ZIp1LGLszDuqcwqwvIryi97CUU9RbksSdFcwD_YCl8eYL3PevBzL0R16JyifEvy1S9lF183MBf2inlcLV5G8qhWhke3ScZPOMT4lk3rIkH0Q4pjtJmYRnVT1-nvU9SVYt6SH3cLQCUu2Wcmd7xBT_T5a0rOl6ylO1e8KfL4SmDV38mEC8wKF0OYs5E4Pny5OlSWE4-nxkiPD5ftGI-vqNsIVbM3NfAwtiCgeNpf91Y5wiGRunW3HJObZMz36bDl_Z4I6GYbsKHNHb-W7SQ582N-KR_7WXz2QJ7xc-73-Ch4YPiQeYF2FZZSCd-360py3ZauPXkTOTTSdwspiBSd6e-FqGTpNbn54Ofi-dAMt9nOg6P7tQRtA4nDYGpKL-FDmfcsT0zBdyP0h_DMBUYbJBS5IeexvtByiL0YdC0tB0gcyltMjAUY2g1Jtyy-WUxqyFfJZA-Pc6bLWZ-C071K8rdIp76stMEdkzZaX08nKyqdJ-tqJrDin_zehx0163SCSb-c_yZ0gDvTqIEEpveXqUG4oxML77O_je1QKi_hfcDmzTpFWZ0ARiOUf-3dq01PS06ynlAqYhO6Zcy_u7l9Vtzdop8iV8Nrf21U8xCfo1pzbVADJq9wy04xyX8P6B0F1aOn7GXewL-Ih49usMlp74rhiEaerIP4pkNkJmKI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "8",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/getUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"getUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_wishlist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjMzMzA2ZjgyYzAzN2ZjYzllNGFlNjEwODRiY2NkMTA5MzMwNDgxMDRlZjI4YzhkMzI3YzhiNTNlMGFhZDViYmYzMTllMWRhYmExNGQ2OGVhIn0.eyJhdWQiOiIyIiwianRpIjoiMzMzMDZmODJjMDM3ZmNjOWU0YWU2MTA4NGJjY2QxMDkzMzA0ODEwNGVmMjhjOGQzMjdjOGI1M2UwYWFkNWJiZjMxOWUxZGFiYTE0ZDY4ZWEiLCJpYXQiOjE1NTcxMjQ4ODQsIm5iZiI6MTU1NzEyNDg4NCwiZXhwIjoxNTU4NDIwODg0LCJzdWIiOiIxODIiLCJzY29wZXMiOltdfQ.ZL09AAHUMQiupSXAZfU9f1B_DSWw5H3z36eu4fjxMr5c2JnryHwJCXD_TFErZKpRW-Y91fgTsl_ELZbLW71HKwtRM6YtQhepCaJhmVZ0A5t_OQ_EOHN7To3PapKc9vr0y986ZHa83t8W3yP3dzg51XpKLcJjRr7GWWp_jfB08c-4wsxoUxy35VaeUd7LLtIbOiqX1mZSGDgpCVHwY4lryY0uVVi31IByNiHlLOm3fL1SyQtBG80VI8YJrw4Fjfqf_LAQaAllTfTleuYxf8vBII8h1hTCkhnirq7Lvh7Ia-IyMS8zzvixdr1Gw8S9ZyQJWTwo3L5npzS70404eK-0pXv0J7e7-zxqIUxCmSRLAoPAqY6L1EjFqD2BS-uuAiG-jPAQEyRJUWj0sS7_o2r1CCnIWQhiEqKaCa_JiejXFbscBN1lEOeCeJyeKZRE7k9gsx2XEIipiAe8oBeNEb1C1jheb227nEoZfA0DRTr3zRXZSsrRZ0OeE4luxXp3d2k_cU4tFK5XdX1me9rMbjBSttgcJ799UDrd4uZAmQcQ2ETOzG6WY34cO-6DXMkESjQjJG3GuuB7ZCIUMXPjloag9iAM7hAY9bX5jFZ9UUUCSjyR448XLxsWzEEWFwHgl5tFAIJqIt5hpk5bMfVk5Q0I5D7oQbQRVeiuY4s-84zmD28",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "8",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://alsayershop.com/api/add_wishlist",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"add_wishlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_wishlist",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjMzMzA2ZjgyYzAzN2ZjYzllNGFlNjEwODRiY2NkMTA5MzMwNDgxMDRlZjI4YzhkMzI3YzhiNTNlMGFhZDViYmYzMTllMWRhYmExNGQ2OGVhIn0.eyJhdWQiOiIyIiwianRpIjoiMzMzMDZmODJjMDM3ZmNjOWU0YWU2MTA4NGJjY2QxMDkzMzA0ODEwNGVmMjhjOGQzMjdjOGI1M2UwYWFkNWJiZjMxOWUxZGFiYTE0ZDY4ZWEiLCJpYXQiOjE1NTcxMjQ4ODQsIm5iZiI6MTU1NzEyNDg4NCwiZXhwIjoxNTU4NDIwODg0LCJzdWIiOiIxODIiLCJzY29wZXMiOltdfQ.ZL09AAHUMQiupSXAZfU9f1B_DSWw5H3z36eu4fjxMr5c2JnryHwJCXD_TFErZKpRW-Y91fgTsl_ELZbLW71HKwtRM6YtQhepCaJhmVZ0A5t_OQ_EOHN7To3PapKc9vr0y986ZHa83t8W3yP3dzg51XpKLcJjRr7GWWp_jfB08c-4wsxoUxy35VaeUd7LLtIbOiqX1mZSGDgpCVHwY4lryY0uVVi31IByNiHlLOm3fL1SyQtBG80VI8YJrw4Fjfqf_LAQaAllTfTleuYxf8vBII8h1hTCkhnirq7Lvh7Ia-IyMS8zzvixdr1Gw8S9ZyQJWTwo3L5npzS70404eK-0pXv0J7e7-zxqIUxCmSRLAoPAqY6L1EjFqD2BS-uuAiG-jPAQEyRJUWj0sS7_o2r1CCnIWQhiEqKaCa_JiejXFbscBN1lEOeCeJyeKZRE7k9gsx2XEIipiAe8oBeNEb1C1jheb227nEoZfA0DRTr3zRXZSsrRZ0OeE4luxXp3d2k_cU4tFK5XdX1me9rMbjBSttgcJ799UDrd4uZAmQcQ2ETOzG6WY34cO-6DXMkESjQjJG3GuuB7ZCIUMXPjloag9iAM7hAY9bX5jFZ9UUUCSjyR448XLxsWzEEWFwHgl5tFAIJqIt5hpk5bMfVk5Q0I5D7oQbQRVeiuY4s-84zmD28",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://alsayershop.com/api/show_wishlist",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"show_wishlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove_wishlist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjMzMzA2ZjgyYzAzN2ZjYzllNGFlNjEwODRiY2NkMTA5MzMwNDgxMDRlZjI4YzhkMzI3YzhiNTNlMGFhZDViYmYzMTllMWRhYmExNGQ2OGVhIn0.eyJhdWQiOiIyIiwianRpIjoiMzMzMDZmODJjMDM3ZmNjOWU0YWU2MTA4NGJjY2QxMDkzMzA0ODEwNGVmMjhjOGQzMjdjOGI1M2UwYWFkNWJiZjMxOWUxZGFiYTE0ZDY4ZWEiLCJpYXQiOjE1NTcxMjQ4ODQsIm5iZiI6MTU1NzEyNDg4NCwiZXhwIjoxNTU4NDIwODg0LCJzdWIiOiIxODIiLCJzY29wZXMiOltdfQ.ZL09AAHUMQiupSXAZfU9f1B_DSWw5H3z36eu4fjxMr5c2JnryHwJCXD_TFErZKpRW-Y91fgTsl_ELZbLW71HKwtRM6YtQhepCaJhmVZ0A5t_OQ_EOHN7To3PapKc9vr0y986ZHa83t8W3yP3dzg51XpKLcJjRr7GWWp_jfB08c-4wsxoUxy35VaeUd7LLtIbOiqX1mZSGDgpCVHwY4lryY0uVVi31IByNiHlLOm3fL1SyQtBG80VI8YJrw4Fjfqf_LAQaAllTfTleuYxf8vBII8h1hTCkhnirq7Lvh7Ia-IyMS8zzvixdr1Gw8S9ZyQJWTwo3L5npzS70404eK-0pXv0J7e7-zxqIUxCmSRLAoPAqY6L1EjFqD2BS-uuAiG-jPAQEyRJUWj0sS7_o2r1CCnIWQhiEqKaCa_JiejXFbscBN1lEOeCeJyeKZRE7k9gsx2XEIipiAe8oBeNEb1C1jheb227nEoZfA0DRTr3zRXZSsrRZ0OeE4luxXp3d2k_cU4tFK5XdX1me9rMbjBSttgcJ799UDrd4uZAmQcQ2ETOzG6WY34cO-6DXMkESjQjJG3GuuB7ZCIUMXPjloag9iAM7hAY9bX5jFZ9UUUCSjyR448XLxsWzEEWFwHgl5tFAIJqIt5hpk5bMfVk5Q0I5D7oQbQRVeiuY4s-84zmD28",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "wishlist_id",
+									"value": "189",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://alsayershop.com/api/remove_wishlist",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"remove_wishlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clear_wishlist",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjMzMzA2ZjgyYzAzN2ZjYzllNGFlNjEwODRiY2NkMTA5MzMwNDgxMDRlZjI4YzhkMzI3YzhiNTNlMGFhZDViYmYzMTllMWRhYmExNGQ2OGVhIn0.eyJhdWQiOiIyIiwianRpIjoiMzMzMDZmODJjMDM3ZmNjOWU0YWU2MTA4NGJjY2QxMDkzMzA0ODEwNGVmMjhjOGQzMjdjOGI1M2UwYWFkNWJiZjMxOWUxZGFiYTE0ZDY4ZWEiLCJpYXQiOjE1NTcxMjQ4ODQsIm5iZiI6MTU1NzEyNDg4NCwiZXhwIjoxNTU4NDIwODg0LCJzdWIiOiIxODIiLCJzY29wZXMiOltdfQ.ZL09AAHUMQiupSXAZfU9f1B_DSWw5H3z36eu4fjxMr5c2JnryHwJCXD_TFErZKpRW-Y91fgTsl_ELZbLW71HKwtRM6YtQhepCaJhmVZ0A5t_OQ_EOHN7To3PapKc9vr0y986ZHa83t8W3yP3dzg51XpKLcJjRr7GWWp_jfB08c-4wsxoUxy35VaeUd7LLtIbOiqX1mZSGDgpCVHwY4lryY0uVVi31IByNiHlLOm3fL1SyQtBG80VI8YJrw4Fjfqf_LAQaAllTfTleuYxf8vBII8h1hTCkhnirq7Lvh7Ia-IyMS8zzvixdr1Gw8S9ZyQJWTwo3L5npzS70404eK-0pXv0J7e7-zxqIUxCmSRLAoPAqY6L1EjFqD2BS-uuAiG-jPAQEyRJUWj0sS7_o2r1CCnIWQhiEqKaCa_JiejXFbscBN1lEOeCeJyeKZRE7k9gsx2XEIipiAe8oBeNEb1C1jheb227nEoZfA0DRTr3zRXZSsrRZ0OeE4luxXp3d2k_cU4tFK5XdX1me9rMbjBSttgcJ799UDrd4uZAmQcQ2ETOzG6WY34cO-6DXMkESjQjJG3GuuB7ZCIUMXPjloag9iAM7hAY9bX5jFZ9UUUCSjyR448XLxsWzEEWFwHgl5tFAIJqIt5hpk5bMfVk5Q0I5D7oQbQRVeiuY4s-84zmD28",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://alsayershop.com/api/clear_wishlist",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"clear_wishlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contactus",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZlNDM2YTc2ZGM2OWQ0ZmE4YjdkYjEzYWU5ZDdhMjQzOTNlNmU3NjBiMGMxYTg3MDBmNzE2YjIyZGI4YmVkZDU3ZGIyMWRjZWZjNDM5NjE2In0.eyJhdWQiOiIyIiwianRpIjoiZmU0MzZhNzZkYzY5ZDRmYThiN2RiMTNhZTlkN2EyNDM5M2U2ZTc2MGIwYzFhODcwMGY3MTZiMjJkYjhiZWRkNTdkYjIxZGNlZmM0Mzk2MTYiLCJpYXQiOjE1NTcxMzA0MTQsIm5iZiI6MTU1NzEzMDQxNCwiZXhwIjoxNTU4NDI2NDE0LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.MCx4ZIp1LGLszDuqcwqwvIryi97CUU9RbksSdFcwD_YCl8eYL3PevBzL0R16JyifEvy1S9lF183MBf2inlcLV5G8qhWhke3ScZPOMT4lk3rIkH0Q4pjtJmYRnVT1-nvU9SVYt6SH3cLQCUu2Wcmd7xBT_T5a0rOl6ylO1e8KfL4SmDV38mEC8wKF0OYs5E4Pny5OlSWE4-nxkiPD5ftGI-vqNsIVbM3NfAwtiCgeNpf91Y5wiGRunW3HJObZMz36bDl_Z4I6GYbsKHNHb-W7SQ582N-KR_7WXz2QJ7xc-73-Ch4YPiQeYF2FZZSCd-360py3ZauPXkTOTTSdwspiBSd6e-FqGTpNbn54Ofi-dAMt9nOg6P7tQRtA4nDYGpKL-FDmfcsT0zBdyP0h_DMBUYbJBS5IeexvtByiL0YdC0tB0gcyltMjAUY2g1Jtyy-WUxqyFfJZA-Pc6bLWZ-C071K8rdIp76stMEdkzZaX08nKyqdJ-tqJrDin_zehx0163SCSb-c_yZ0gDvTqIEEpveXqUG4oxML77O_je1QKi_hfcDmzTpFWZ0ARiOUf-3dq01PS06ynlAqYhO6Zcy_u7l9Vtzdop8iV8Nrf21U8xCfo1pzbVADJq9wy04xyX8P6B0F1aOn7GXewL-Ih49usMlp74rhiEaerIP4pkNkJmKI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://alsayershop.com/api/contactus",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"contactus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send_contact",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZlNDM2YTc2ZGM2OWQ0ZmE4YjdkYjEzYWU5ZDdhMjQzOTNlNmU3NjBiMGMxYTg3MDBmNzE2YjIyZGI4YmVkZDU3ZGIyMWRjZWZjNDM5NjE2In0.eyJhdWQiOiIyIiwianRpIjoiZmU0MzZhNzZkYzY5ZDRmYThiN2RiMTNhZTlkN2EyNDM5M2U2ZTc2MGIwYzFhODcwMGY3MTZiMjJkYjhiZWRkNTdkYjIxZGNlZmM0Mzk2MTYiLCJpYXQiOjE1NTcxMzA0MTQsIm5iZiI6MTU1NzEzMDQxNCwiZXhwIjoxNTU4NDI2NDE0LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.MCx4ZIp1LGLszDuqcwqwvIryi97CUU9RbksSdFcwD_YCl8eYL3PevBzL0R16JyifEvy1S9lF183MBf2inlcLV5G8qhWhke3ScZPOMT4lk3rIkH0Q4pjtJmYRnVT1-nvU9SVYt6SH3cLQCUu2Wcmd7xBT_T5a0rOl6ylO1e8KfL4SmDV38mEC8wKF0OYs5E4Pny5OlSWE4-nxkiPD5ftGI-vqNsIVbM3NfAwtiCgeNpf91Y5wiGRunW3HJObZMz36bDl_Z4I6GYbsKHNHb-W7SQ582N-KR_7WXz2QJ7xc-73-Ch4YPiQeYF2FZZSCd-360py3ZauPXkTOTTSdwspiBSd6e-FqGTpNbn54Ofi-dAMt9nOg6P7tQRtA4nDYGpKL-FDmfcsT0zBdyP0h_DMBUYbJBS5IeexvtByiL0YdC0tB0gcyltMjAUY2g1Jtyy-WUxqyFfJZA-Pc6bLWZ-C071K8rdIp76stMEdkzZaX08nKyqdJ-tqJrDin_zehx0163SCSb-c_yZ0gDvTqIEEpveXqUG4oxML77O_je1QKi_hfcDmzTpFWZ0ARiOUf-3dq01PS06ynlAqYhO6Zcy_u7l9Vtzdop8iV8Nrf21U8xCfo1pzbVADJq9wy04xyX8P6B0F1aOn7GXewL-Ih49usMlp74rhiEaerIP4pkNkJmKI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "eman@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "hello again",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "test sub",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://alsayershop.com/api/send_contact",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"send_contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://alsayershop.com/api/categories",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get subcategory by category id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZlNDM2YTc2ZGM2OWQ0ZmE4YjdkYjEzYWU5ZDdhMjQzOTNlNmU3NjBiMGMxYTg3MDBmNzE2YjIyZGI4YmVkZDU3ZGIyMWRjZWZjNDM5NjE2In0.eyJhdWQiOiIyIiwianRpIjoiZmU0MzZhNzZkYzY5ZDRmYThiN2RiMTNhZTlkN2EyNDM5M2U2ZTc2MGIwYzFhODcwMGY3MTZiMjJkYjhiZWRkNTdkYjIxZGNlZmM0Mzk2MTYiLCJpYXQiOjE1NTcxMzA0MTQsIm5iZiI6MTU1NzEzMDQxNCwiZXhwIjoxNTU4NDI2NDE0LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.MCx4ZIp1LGLszDuqcwqwvIryi97CUU9RbksSdFcwD_YCl8eYL3PevBzL0R16JyifEvy1S9lF183MBf2inlcLV5G8qhWhke3ScZPOMT4lk3rIkH0Q4pjtJmYRnVT1-nvU9SVYt6SH3cLQCUu2Wcmd7xBT_T5a0rOl6ylO1e8KfL4SmDV38mEC8wKF0OYs5E4Pny5OlSWE4-nxkiPD5ftGI-vqNsIVbM3NfAwtiCgeNpf91Y5wiGRunW3HJObZMz36bDl_Z4I6GYbsKHNHb-W7SQ582N-KR_7WXz2QJ7xc-73-Ch4YPiQeYF2FZZSCd-360py3ZauPXkTOTTSdwspiBSd6e-FqGTpNbn54Ofi-dAMt9nOg6P7tQRtA4nDYGpKL-FDmfcsT0zBdyP0h_DMBUYbJBS5IeexvtByiL0YdC0tB0gcyltMjAUY2g1Jtyy-WUxqyFfJZA-Pc6bLWZ-C071K8rdIp76stMEdkzZaX08nKyqdJ-tqJrDin_zehx0163SCSb-c_yZ0gDvTqIEEpveXqUG4oxML77O_je1QKi_hfcDmzTpFWZ0ARiOUf-3dq01PS06ynlAqYhO6Zcy_u7l9Vtzdop8iV8Nrf21U8xCfo1pzbVADJq9wy04xyX8P6B0F1aOn7GXewL-Ih49usMlp74rhiEaerIP4pkNkJmKI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://alsayershop.com/api/category/16",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"category",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImYxZjIyNTZkMDE0MmI4ZTZmNDA1NmU0NTNmZTgyZDgzM2JmMTM5YWM0N2E4NjMxZGRiYmU1ZmVhOTQ2NWEwZGM3MzlkNTkyYTNkYjczZmI0In0.eyJhdWQiOiIyIiwianRpIjoiZjFmMjI1NmQwMTQyYjhlNmY0MDU2ZTQ1M2ZlODJkODMzYmYxMzlhYzQ3YTg2MzFkZGJiZTVmZWE5NDY1YTBkYzczOWQ1OTJhM2RiNzNmYjQiLCJpYXQiOjE1NTcxNDU0MjMsIm5iZiI6MTU1NzE0NTQyMywiZXhwIjoxNTU4NDQxNDIyLCJzdWIiOiIxODIiLCJzY29wZXMiOltdfQ.RXFxqxqcelIBPBQmZABRPZnG9u7cMwWkpxqWy2XEZfmXWVnlwHcxMAuW87Z-Fwl5VxQjGFNL8qfwKCK8XslJNBkOHlA0jcrqvrgEzaTyuC4mf4Y76a7aMBFoxW8D_7xrfgFpyGV1E-H-hza9HWIOrjYuajp4VJXNpZMBz0ytyzGqb-DJdPwQWb_Cu1eKsGOaPlEhbilmZuRRuBEmFQ8m_nUy0W7t7bLV51dAm5X23UyedN1Feo5LVT9m8vGwpqEZdTz3KjtYkZGWEvBiEV3YFy9x22fJhtQITISGfvQ55xIwbIVtFU0haUa3bdFBwqUdK1Nqst5ue7s3J1TKQNJGPQTinoVvJEeVLWbcNGGuoLn9iKml1dr2yXx45uwfQfK9Wh1fth1YzD8JvxMPxOgWLW67qGRE2xmWu3Ja2JoVpxX9XCYylS6J4YG7qX9aLpey3-tvcKKcBzC6STpywYAJZBtSIiRrvZzp-RBHrOziiieje8FcolAwKotwFGdIqlggsCcXMdyc1gl8gz3pKaPwE9xBluTCf1zD6Nut3Csvk9k4qA8MpFcf3XkEDPabuk7xDRYlcRKUBKVtE2uKRUwMHgzUq8KXinBSokp9moj-xwOCoF3JZDb5xdwJqF3hKFpALjkZmPWr9wFbxqm93ORSvoAqs9Y76-JRxB9gXWiSCwo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "review",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://alsayershop.com/api/add_review",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"add_review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategoryProducts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZlNDM2YTc2ZGM2OWQ0ZmE4YjdkYjEzYWU5ZDdhMjQzOTNlNmU3NjBiMGMxYTg3MDBmNzE2YjIyZGI4YmVkZDU3ZGIyMWRjZWZjNDM5NjE2In0.eyJhdWQiOiIyIiwianRpIjoiZmU0MzZhNzZkYzY5ZDRmYThiN2RiMTNhZTlkN2EyNDM5M2U2ZTc2MGIwYzFhODcwMGY3MTZiMjJkYjhiZWRkNTdkYjIxZGNlZmM0Mzk2MTYiLCJpYXQiOjE1NTcxMzA0MTQsIm5iZiI6MTU1NzEzMDQxNCwiZXhwIjoxNTU4NDI2NDE0LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.MCx4ZIp1LGLszDuqcwqwvIryi97CUU9RbksSdFcwD_YCl8eYL3PevBzL0R16JyifEvy1S9lF183MBf2inlcLV5G8qhWhke3ScZPOMT4lk3rIkH0Q4pjtJmYRnVT1-nvU9SVYt6SH3cLQCUu2Wcmd7xBT_T5a0rOl6ylO1e8KfL4SmDV38mEC8wKF0OYs5E4Pny5OlSWE4-nxkiPD5ftGI-vqNsIVbM3NfAwtiCgeNpf91Y5wiGRunW3HJObZMz36bDl_Z4I6GYbsKHNHb-W7SQ582N-KR_7WXz2QJ7xc-73-Ch4YPiQeYF2FZZSCd-360py3ZauPXkTOTTSdwspiBSd6e-FqGTpNbn54Ofi-dAMt9nOg6P7tQRtA4nDYGpKL-FDmfcsT0zBdyP0h_DMBUYbJBS5IeexvtByiL0YdC0tB0gcyltMjAUY2g1Jtyy-WUxqyFfJZA-Pc6bLWZ-C071K8rdIp76stMEdkzZaX08nKyqdJ-tqJrDin_zehx0163SCSb-c_yZ0gDvTqIEEpveXqUG4oxML77O_je1QKi_hfcDmzTpFWZ0ARiOUf-3dq01PS06ynlAqYhO6Zcy_u7l9Vtzdop8iV8Nrf21U8xCfo1pzbVADJq9wy04xyX8P6B0F1aOn7GXewL-Ih49usMlp74rhiEaerIP4pkNkJmKI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "special",
+									"description": "sells,latest,special",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://alsayershop.com/api/getCategoryProducts",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"getCategoryProducts"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "c",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all_shipments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1NjE0NTA1YTRjZWQ5YmY3MGM0YzYyM2E2MDZjYjZmOGVjNDEyMzc3MGY3MmU1ZWVmZTVjZjcyNDUwMTAwZTA5M2JlNmUzOGFmOWQxM2NlIn0.eyJhdWQiOiIyIiwianRpIjoiYTU2MTQ1MDVhNGNlZDliZjcwYzRjNjIzYTYwNmNiNmY4ZWM0MTIzNzcwZjcyZTVlZWZlNWNmNzI0NTAxMDBlMDkzYmU2ZTM4YWY5ZDEzY2UiLCJpYXQiOjE1NTcyMjcyODksIm5iZiI6MTU1NzIyNzI4OSwiZXhwIjoxNTU4NTIzMjg2LCJzdWIiOiIxODMiLCJzY29wZXMiOltdfQ.hVfPT1i57s_-KWhQ4-i0WVh8ettVgrVbNJv1odxitXYhs1yZqZHAk_guYAb-x3wYmiYqoFz4fgxJCjIopMVwbvYUQjhSoV-VwhmxGRQQIYhnwX5tF3vgeOMrE6EZ58WkmsFCFggZmVFFh1SNBHiIXr4bmLiTK5smou2xnggAdCmFOfuBNhnMns54sUlaYEjOMjl3l18BtwkAH5Z0u14tTJc0qEWvObtPF5H0ROmM72PMW7XFtiEZ-gg3ven6AVThUwSxjN4wC4sZ7ivW0Jcc7Qrndy_RU0mRmPRCZrUgH9tbmBPGevRgRCqsaYoNCGQyuekluAUIDgITBlk2Apzor4QUyi8DAIVOo4Txy5Mx29nJAvYw7e-TqlamYzhInMiVsnQOX4SUYB7G-8k7Jsc_GtUq1DjuSf2aWoKEo8uzWXQe0kk2qcZBjdvBklEqMdvMP9WbabRRXHnfNiPrp9l6R0Tej0eODiVY-iHTLAtzFm5vBqUKO-rMaERe061gYaYqDJsgsb4DD8L_UFEcev9VCPpu4ZtBzon9Mm2CQotnqBt8uCk3mb3pntzW5AGe0rW_DBrABFG1pqtcLmek8C35IJtR1DcpmIsQUN6kgo8hxiUYuCD3fPswJnKI_snHhUc6JAdp1RgVHD9eJi3q7ty_FS699VNgaxR7kJak6eBg2uU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/all_shipments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"all_shipments"
+							]
+						},
+						"description": "مصاريف النقل"
+					},
+					"response": []
+				},
+				{
+					"name": "all_address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1NjE0NTA1YTRjZWQ5YmY3MGM0YzYyM2E2MDZjYjZmOGVjNDEyMzc3MGY3MmU1ZWVmZTVjZjcyNDUwMTAwZTA5M2JlNmUzOGFmOWQxM2NlIn0.eyJhdWQiOiIyIiwianRpIjoiYTU2MTQ1MDVhNGNlZDliZjcwYzRjNjIzYTYwNmNiNmY4ZWM0MTIzNzcwZjcyZTVlZWZlNWNmNzI0NTAxMDBlMDkzYmU2ZTM4YWY5ZDEzY2UiLCJpYXQiOjE1NTcyMjcyODksIm5iZiI6MTU1NzIyNzI4OSwiZXhwIjoxNTU4NTIzMjg2LCJzdWIiOiIxODMiLCJzY29wZXMiOltdfQ.hVfPT1i57s_-KWhQ4-i0WVh8ettVgrVbNJv1odxitXYhs1yZqZHAk_guYAb-x3wYmiYqoFz4fgxJCjIopMVwbvYUQjhSoV-VwhmxGRQQIYhnwX5tF3vgeOMrE6EZ58WkmsFCFggZmVFFh1SNBHiIXr4bmLiTK5smou2xnggAdCmFOfuBNhnMns54sUlaYEjOMjl3l18BtwkAH5Z0u14tTJc0qEWvObtPF5H0ROmM72PMW7XFtiEZ-gg3ven6AVThUwSxjN4wC4sZ7ivW0Jcc7Qrndy_RU0mRmPRCZrUgH9tbmBPGevRgRCqsaYoNCGQyuekluAUIDgITBlk2Apzor4QUyi8DAIVOo4Txy5Mx29nJAvYw7e-TqlamYzhInMiVsnQOX4SUYB7G-8k7Jsc_GtUq1DjuSf2aWoKEo8uzWXQe0kk2qcZBjdvBklEqMdvMP9WbabRRXHnfNiPrp9l6R0Tej0eODiVY-iHTLAtzFm5vBqUKO-rMaERe061gYaYqDJsgsb4DD8L_UFEcev9VCPpu4ZtBzon9Mm2CQotnqBt8uCk3mb3pntzW5AGe0rW_DBrABFG1pqtcLmek8C35IJtR1DcpmIsQUN6kgo8hxiUYuCD3fPswJnKI_snHhUc6JAdp1RgVHD9eJi3q7ty_FS699VNgaxR7kJak6eBg2uU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/all_address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"all_address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save_order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1NjE0NTA1YTRjZWQ5YmY3MGM0YzYyM2E2MDZjYjZmOGVjNDEyMzc3MGY3MmU1ZWVmZTVjZjcyNDUwMTAwZTA5M2JlNmUzOGFmOWQxM2NlIn0.eyJhdWQiOiIyIiwianRpIjoiYTU2MTQ1MDVhNGNlZDliZjcwYzRjNjIzYTYwNmNiNmY4ZWM0MTIzNzcwZjcyZTVlZWZlNWNmNzI0NTAxMDBlMDkzYmU2ZTM4YWY5ZDEzY2UiLCJpYXQiOjE1NTcyMjcyODksIm5iZiI6MTU1NzIyNzI4OSwiZXhwIjoxNTU4NTIzMjg2LCJzdWIiOiIxODMiLCJzY29wZXMiOltdfQ.hVfPT1i57s_-KWhQ4-i0WVh8ettVgrVbNJv1odxitXYhs1yZqZHAk_guYAb-x3wYmiYqoFz4fgxJCjIopMVwbvYUQjhSoV-VwhmxGRQQIYhnwX5tF3vgeOMrE6EZ58WkmsFCFggZmVFFh1SNBHiIXr4bmLiTK5smou2xnggAdCmFOfuBNhnMns54sUlaYEjOMjl3l18BtwkAH5Z0u14tTJc0qEWvObtPF5H0ROmM72PMW7XFtiEZ-gg3ven6AVThUwSxjN4wC4sZ7ivW0Jcc7Qrndy_RU0mRmPRCZrUgH9tbmBPGevRgRCqsaYoNCGQyuekluAUIDgITBlk2Apzor4QUyi8DAIVOo4Txy5Mx29nJAvYw7e-TqlamYzhInMiVsnQOX4SUYB7G-8k7Jsc_GtUq1DjuSf2aWoKEo8uzWXQe0kk2qcZBjdvBklEqMdvMP9WbabRRXHnfNiPrp9l6R0Tej0eODiVY-iHTLAtzFm5vBqUKO-rMaERe061gYaYqDJsgsb4DD8L_UFEcev9VCPpu4ZtBzon9Mm2CQotnqBt8uCk3mb3pntzW5AGe0rW_DBrABFG1pqtcLmek8C35IJtR1DcpmIsQUN6kgo8hxiUYuCD3fPswJnKI_snHhUc6JAdp1RgVHD9eJi3q7ty_FS699VNgaxR7kJak6eBg2uU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "183",
+									"type": "text"
+								},
+								{
+									"key": "address_id",
+									"value": "7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/save_order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"save_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_orders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1NjE0NTA1YTRjZWQ5YmY3MGM0YzYyM2E2MDZjYjZmOGVjNDEyMzc3MGY3MmU1ZWVmZTVjZjcyNDUwMTAwZTA5M2JlNmUzOGFmOWQxM2NlIn0.eyJhdWQiOiIyIiwianRpIjoiYTU2MTQ1MDVhNGNlZDliZjcwYzRjNjIzYTYwNmNiNmY4ZWM0MTIzNzcwZjcyZTVlZWZlNWNmNzI0NTAxMDBlMDkzYmU2ZTM4YWY5ZDEzY2UiLCJpYXQiOjE1NTcyMjcyODksIm5iZiI6MTU1NzIyNzI4OSwiZXhwIjoxNTU4NTIzMjg2LCJzdWIiOiIxODMiLCJzY29wZXMiOltdfQ.hVfPT1i57s_-KWhQ4-i0WVh8ettVgrVbNJv1odxitXYhs1yZqZHAk_guYAb-x3wYmiYqoFz4fgxJCjIopMVwbvYUQjhSoV-VwhmxGRQQIYhnwX5tF3vgeOMrE6EZ58WkmsFCFggZmVFFh1SNBHiIXr4bmLiTK5smou2xnggAdCmFOfuBNhnMns54sUlaYEjOMjl3l18BtwkAH5Z0u14tTJc0qEWvObtPF5H0ROmM72PMW7XFtiEZ-gg3ven6AVThUwSxjN4wC4sZ7ivW0Jcc7Qrndy_RU0mRmPRCZrUgH9tbmBPGevRgRCqsaYoNCGQyuekluAUIDgITBlk2Apzor4QUyi8DAIVOo4Txy5Mx29nJAvYw7e-TqlamYzhInMiVsnQOX4SUYB7G-8k7Jsc_GtUq1DjuSf2aWoKEo8uzWXQe0kk2qcZBjdvBklEqMdvMP9WbabRRXHnfNiPrp9l6R0Tej0eODiVY-iHTLAtzFm5vBqUKO-rMaERe061gYaYqDJsgsb4DD8L_UFEcev9VCPpu4ZtBzon9Mm2CQotnqBt8uCk3mb3pntzW5AGe0rW_DBrABFG1pqtcLmek8C35IJtR1DcpmIsQUN6kgo8hxiUYuCD3fPswJnKI_snHhUc6JAdp1RgVHD9eJi3q7ty_FS699VNgaxR7kJak6eBg2uU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/show_orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"show_orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "shipment_price",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1NjE0NTA1YTRjZWQ5YmY3MGM0YzYyM2E2MDZjYjZmOGVjNDEyMzc3MGY3MmU1ZWVmZTVjZjcyNDUwMTAwZTA5M2JlNmUzOGFmOWQxM2NlIn0.eyJhdWQiOiIyIiwianRpIjoiYTU2MTQ1MDVhNGNlZDliZjcwYzRjNjIzYTYwNmNiNmY4ZWM0MTIzNzcwZjcyZTVlZWZlNWNmNzI0NTAxMDBlMDkzYmU2ZTM4YWY5ZDEzY2UiLCJpYXQiOjE1NTcyMjcyODksIm5iZiI6MTU1NzIyNzI4OSwiZXhwIjoxNTU4NTIzMjg2LCJzdWIiOiIxODMiLCJzY29wZXMiOltdfQ.hVfPT1i57s_-KWhQ4-i0WVh8ettVgrVbNJv1odxitXYhs1yZqZHAk_guYAb-x3wYmiYqoFz4fgxJCjIopMVwbvYUQjhSoV-VwhmxGRQQIYhnwX5tF3vgeOMrE6EZ58WkmsFCFggZmVFFh1SNBHiIXr4bmLiTK5smou2xnggAdCmFOfuBNhnMns54sUlaYEjOMjl3l18BtwkAH5Z0u14tTJc0qEWvObtPF5H0ROmM72PMW7XFtiEZ-gg3ven6AVThUwSxjN4wC4sZ7ivW0Jcc7Qrndy_RU0mRmPRCZrUgH9tbmBPGevRgRCqsaYoNCGQyuekluAUIDgITBlk2Apzor4QUyi8DAIVOo4Txy5Mx29nJAvYw7e-TqlamYzhInMiVsnQOX4SUYB7G-8k7Jsc_GtUq1DjuSf2aWoKEo8uzWXQe0kk2qcZBjdvBklEqMdvMP9WbabRRXHnfNiPrp9l6R0Tej0eODiVY-iHTLAtzFm5vBqUKO-rMaERe061gYaYqDJsgsb4DD8L_UFEcev9VCPpu4ZtBzon9Mm2CQotnqBt8uCk3mb3pntzW5AGe0rW_DBrABFG1pqtcLmek8C35IJtR1DcpmIsQUN6kgo8hxiUYuCD3fPswJnKI_snHhUc6JAdp1RgVHD9eJi3q7ty_FS699VNgaxR7kJak6eBg2uU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "address_id",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/shipment_price",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"shipment_price"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check_copun",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1NjE0NTA1YTRjZWQ5YmY3MGM0YzYyM2E2MDZjYjZmOGVjNDEyMzc3MGY3MmU1ZWVmZTVjZjcyNDUwMTAwZTA5M2JlNmUzOGFmOWQxM2NlIn0.eyJhdWQiOiIyIiwianRpIjoiYTU2MTQ1MDVhNGNlZDliZjcwYzRjNjIzYTYwNmNiNmY4ZWM0MTIzNzcwZjcyZTVlZWZlNWNmNzI0NTAxMDBlMDkzYmU2ZTM4YWY5ZDEzY2UiLCJpYXQiOjE1NTcyMjcyODksIm5iZiI6MTU1NzIyNzI4OSwiZXhwIjoxNTU4NTIzMjg2LCJzdWIiOiIxODMiLCJzY29wZXMiOltdfQ.hVfPT1i57s_-KWhQ4-i0WVh8ettVgrVbNJv1odxitXYhs1yZqZHAk_guYAb-x3wYmiYqoFz4fgxJCjIopMVwbvYUQjhSoV-VwhmxGRQQIYhnwX5tF3vgeOMrE6EZ58WkmsFCFggZmVFFh1SNBHiIXr4bmLiTK5smou2xnggAdCmFOfuBNhnMns54sUlaYEjOMjl3l18BtwkAH5Z0u14tTJc0qEWvObtPF5H0ROmM72PMW7XFtiEZ-gg3ven6AVThUwSxjN4wC4sZ7ivW0Jcc7Qrndy_RU0mRmPRCZrUgH9tbmBPGevRgRCqsaYoNCGQyuekluAUIDgITBlk2Apzor4QUyi8DAIVOo4Txy5Mx29nJAvYw7e-TqlamYzhInMiVsnQOX4SUYB7G-8k7Jsc_GtUq1DjuSf2aWoKEo8uzWXQe0kk2qcZBjdvBklEqMdvMP9WbabRRXHnfNiPrp9l6R0Tej0eODiVY-iHTLAtzFm5vBqUKO-rMaERe061gYaYqDJsgsb4DD8L_UFEcev9VCPpu4ZtBzon9Mm2CQotnqBt8uCk3mb3pntzW5AGe0rW_DBrABFG1pqtcLmek8C35IJtR1DcpmIsQUN6kgo8hxiUYuCD3fPswJnKI_snHhUc6JAdp1RgVHD9eJi3q7ty_FS699VNgaxR7kJak6eBg2uU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "copun_code",
+									"value": "6dsf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/check_copun",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"check_copun"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order_details/25",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1NjE0NTA1YTRjZWQ5YmY3MGM0YzYyM2E2MDZjYjZmOGVjNDEyMzc3MGY3MmU1ZWVmZTVjZjcyNDUwMTAwZTA5M2JlNmUzOGFmOWQxM2NlIn0.eyJhdWQiOiIyIiwianRpIjoiYTU2MTQ1MDVhNGNlZDliZjcwYzRjNjIzYTYwNmNiNmY4ZWM0MTIzNzcwZjcyZTVlZWZlNWNmNzI0NTAxMDBlMDkzYmU2ZTM4YWY5ZDEzY2UiLCJpYXQiOjE1NTcyMjcyODksIm5iZiI6MTU1NzIyNzI4OSwiZXhwIjoxNTU4NTIzMjg2LCJzdWIiOiIxODMiLCJzY29wZXMiOltdfQ.hVfPT1i57s_-KWhQ4-i0WVh8ettVgrVbNJv1odxitXYhs1yZqZHAk_guYAb-x3wYmiYqoFz4fgxJCjIopMVwbvYUQjhSoV-VwhmxGRQQIYhnwX5tF3vgeOMrE6EZ58WkmsFCFggZmVFFh1SNBHiIXr4bmLiTK5smou2xnggAdCmFOfuBNhnMns54sUlaYEjOMjl3l18BtwkAH5Z0u14tTJc0qEWvObtPF5H0ROmM72PMW7XFtiEZ-gg3ven6AVThUwSxjN4wC4sZ7ivW0Jcc7Qrndy_RU0mRmPRCZrUgH9tbmBPGevRgRCqsaYoNCGQyuekluAUIDgITBlk2Apzor4QUyi8DAIVOo4Txy5Mx29nJAvYw7e-TqlamYzhInMiVsnQOX4SUYB7G-8k7Jsc_GtUq1DjuSf2aWoKEo8uzWXQe0kk2qcZBjdvBklEqMdvMP9WbabRRXHnfNiPrp9l6R0Tej0eODiVY-iHTLAtzFm5vBqUKO-rMaERe061gYaYqDJsgsb4DD8L_UFEcev9VCPpu4ZtBzon9Mm2CQotnqBt8uCk3mb3pntzW5AGe0rW_DBrABFG1pqtcLmek8C35IJtR1DcpmIsQUN6kgo8hxiUYuCD3fPswJnKI_snHhUc6JAdp1RgVHD9eJi3q7ty_FS699VNgaxR7kJak6eBg2uU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/order_details/25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"order_details",
+								"25"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "local",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "eman@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "VpkTtQe71mg2Cioua0Igr4KVUzeCGLNGsNMX2KQA",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mahmoud@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "01011279823",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "female",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "VpkTtQe71mg2Cioua0Igr4KVUzeCGLNGsNMX2KQA",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "emy",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1NjE0NTA1YTRjZWQ5YmY3MGM0YzYyM2E2MDZjYjZmOGVjNDEyMzc3MGY3MmU1ZWVmZTVjZjcyNDUwMTAwZTA5M2JlNmUzOGFmOWQxM2NlIn0.eyJhdWQiOiIyIiwianRpIjoiYTU2MTQ1MDVhNGNlZDliZjcwYzRjNjIzYTYwNmNiNmY4ZWM0MTIzNzcwZjcyZTVlZWZlNWNmNzI0NTAxMDBlMDkzYmU2ZTM4YWY5ZDEzY2UiLCJpYXQiOjE1NTcyMjcyODksIm5iZiI6MTU1NzIyNzI4OSwiZXhwIjoxNTU4NTIzMjg2LCJzdWIiOiIxODMiLCJzY29wZXMiOltdfQ.hVfPT1i57s_-KWhQ4-i0WVh8ettVgrVbNJv1odxitXYhs1yZqZHAk_guYAb-x3wYmiYqoFz4fgxJCjIopMVwbvYUQjhSoV-VwhmxGRQQIYhnwX5tF3vgeOMrE6EZ58WkmsFCFggZmVFFh1SNBHiIXr4bmLiTK5smou2xnggAdCmFOfuBNhnMns54sUlaYEjOMjl3l18BtwkAH5Z0u14tTJc0qEWvObtPF5H0ROmM72PMW7XFtiEZ-gg3ven6AVThUwSxjN4wC4sZ7ivW0Jcc7Qrndy_RU0mRmPRCZrUgH9tbmBPGevRgRCqsaYoNCGQyuekluAUIDgITBlk2Apzor4QUyi8DAIVOo4Txy5Mx29nJAvYw7e-TqlamYzhInMiVsnQOX4SUYB7G-8k7Jsc_GtUq1DjuSf2aWoKEo8uzWXQe0kk2qcZBjdvBklEqMdvMP9WbabRRXHnfNiPrp9l6R0Tej0eODiVY-iHTLAtzFm5vBqUKO-rMaERe061gYaYqDJsgsb4DD8L_UFEcev9VCPpu4ZtBzon9Mm2CQotnqBt8uCk3mb3pntzW5AGe0rW_DBrABFG1pqtcLmek8C35IJtR1DcpmIsQUN6kgo8hxiUYuCD3fPswJnKI_snHhUc6JAdp1RgVHD9eJi3q7ty_FS699VNgaxR7kJak6eBg2uU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "13",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/add_cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"add_cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImU1Yzk3ZDkwYmFiNzNlYTU5ZTljZjAyYjYzYTZjNzkyNjMwYTZlNWZkNTliMmU5ZGNmNGFhYmIzMWExMDYwZjZhNzMzZTBhMjc1MGM2ZmE1In0.eyJhdWQiOiIyIiwianRpIjoiZTVjOTdkOTBiYWI3M2VhNTllOWNmMDJiNjNhNmM3OTI2MzBhNmU1ZmQ1OWIyZTlkY2Y0YWFiYjMxYTEwNjBmNmE3MzNlMGEyNzUwYzZmYTUiLCJpYXQiOjE1NTcwNjU0ODksIm5iZiI6MTU1NzA2NTQ4OSwiZXhwIjoxNTU4MzYxNDg4LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.aEFQHvp5S2w05x5ly1zLBammWu1OflKMQzU570yCVtFgyOwmBMCUiqgQaao6sDkSJBx1lq2g7iUCxLUfw2GB3sOoLe099KJDtK7vl9IYmidW7Qckfu7C22L_r6eLHJk_71wqynZtXwslXO0zyj1yOZ5lJ06M8h2dFqFf9m6WGwcHCiyQRWGwzduoX_pBqmu3rertVjCNrBmZ7yHa7w16IuJ6iIaz3A1YDbEJlO0uNdHy6-jdqkO3efiQfev6c11Z33wVXpMT9rw0iOWF-p9YGLcLmop70xGh9sMYnFIYXncYbKdtm-V3o9-8murhCHi7dm2C_ZjfOYBaeiglz2AyDVrIKMp_SNuAVS4EbvL0KjOEjm5QB698aZo3kKYpS574XiiIdEjnzZ5BWTI8CCn3wkg6VgO0pc97z87oL7wDBcpPRZqUIXPUJIm18h0W4fkmlr9QFYqELTQ7C7NT84urKdBPo4Oyy1eAElSLkNzMB7JdPNDMSISasX-7EcONyrH3mTAu160Wb2H8XXF76D6TVGuKNoeAFEDSbLy0FZsY4OvOHX4ndxRSmwNGAbLask0LKdMHdOcpCC0I5x93FXeBskbYAE1FgXnVJwSi4sHjdABSIZ1WGrlHofomQ-NcD-hhW9DK-hlIvyCoZZDCmFlA4cO--38QukPWDdyezasHbCs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/show_cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"show_cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove_cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImU1Yzk3ZDkwYmFiNzNlYTU5ZTljZjAyYjYzYTZjNzkyNjMwYTZlNWZkNTliMmU5ZGNmNGFhYmIzMWExMDYwZjZhNzMzZTBhMjc1MGM2ZmE1In0.eyJhdWQiOiIyIiwianRpIjoiZTVjOTdkOTBiYWI3M2VhNTllOWNmMDJiNjNhNmM3OTI2MzBhNmU1ZmQ1OWIyZTlkY2Y0YWFiYjMxYTEwNjBmNmE3MzNlMGEyNzUwYzZmYTUiLCJpYXQiOjE1NTcwNjU0ODksIm5iZiI6MTU1NzA2NTQ4OSwiZXhwIjoxNTU4MzYxNDg4LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.aEFQHvp5S2w05x5ly1zLBammWu1OflKMQzU570yCVtFgyOwmBMCUiqgQaao6sDkSJBx1lq2g7iUCxLUfw2GB3sOoLe099KJDtK7vl9IYmidW7Qckfu7C22L_r6eLHJk_71wqynZtXwslXO0zyj1yOZ5lJ06M8h2dFqFf9m6WGwcHCiyQRWGwzduoX_pBqmu3rertVjCNrBmZ7yHa7w16IuJ6iIaz3A1YDbEJlO0uNdHy6-jdqkO3efiQfev6c11Z33wVXpMT9rw0iOWF-p9YGLcLmop70xGh9sMYnFIYXncYbKdtm-V3o9-8murhCHi7dm2C_ZjfOYBaeiglz2AyDVrIKMp_SNuAVS4EbvL0KjOEjm5QB698aZo3kKYpS574XiiIdEjnzZ5BWTI8CCn3wkg6VgO0pc97z87oL7wDBcpPRZqUIXPUJIm18h0W4fkmlr9QFYqELTQ7C7NT84urKdBPo4Oyy1eAElSLkNzMB7JdPNDMSISasX-7EcONyrH3mTAu160Wb2H8XXF76D6TVGuKNoeAFEDSbLy0FZsY4OvOHX4ndxRSmwNGAbLask0LKdMHdOcpCC0I5x93FXeBskbYAE1FgXnVJwSi4sHjdABSIZ1WGrlHofomQ-NcD-hhW9DK-hlIvyCoZZDCmFlA4cO--38QukPWDdyezasHbCs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cart_id",
+									"value": "611",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/remove_cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"remove_cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImUzZmEzNTRiZDMwN2YwZjY2MmFjMTQzZjFlMTJmY2E4NzUyMGIyMzQyODAyMmZlZjM3OWQ2NGVjMmNkNWQzMjgwMzdmNDliNTJkODVkNDQ5In0.eyJhdWQiOiIyIiwianRpIjoiZTNmYTM1NGJkMzA3ZjBmNjYyYWMxNDNmMWUxMmZjYTg3NTIwYjIzNDI4MDIyZmVmMzc5ZDY0ZWMyY2Q1ZDMyODAzN2Y0OWI1MmQ4NWQ0NDkiLCJpYXQiOjE1NTcwNjcxMzMsIm5iZiI6MTU1NzA2NzEzMywiZXhwIjoxNTU4MzYzMTMzLCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.BwZ1UbPi_pRsImwxzf0kOzTcqO4WkI1UckhEJLLK2tTKlhGDByRP6iOq5tKtQ9qEyn6QxKN0U2h6EPUdJn4nYMaiuwDScyEFxmjyiLRWJWJvTt-ei5rY1lwH-1PDe4VEVuCgUHXp-4pkp8PpPFQMA-u4xAzHDpjzEX4FS5b96DYW3JI1Nh2dHUCA3mQPcJnTpsI2oa3o3x1Ctkzj6fVB9y69TSvfsZFIONCgFNk8QQzTmSAEifJfa1TIsI-yE0iTgHzPWuT-7r5eL-4iTJ0xHR42jECkmddErGAQYyJB7iSkEikXbcY3NQbKvN7v5rnD54uWVXpZ3eHUnLqhf1OWh87LQKf8fKQhBz9I1vpj-MlwFlM0NvNmcImdvlVYhCnXBScwKlpaxZKvN8gvamWPaHhvPVLTCj7QO6r6ArCyTpktMp2jOEnGTH7iIeoEklbHFA2stxUcOB5xoPmPia8ibas_MkGYWVgATUs_oQrzQnQFMiSnZxl6DywUpzttYXxnUS18sfF-kwyGgviF296wRwQpZPrqcF89vR9qf2325lUYDFf4KZKfFyCCRkIP66-L5VYxK8BiZm0PkjUzssBzYHb04pwY6UWUNyv-K0jvs-ubaZvAdvc5ibkmnM44wRJBBVFWFMYxT1bUblUfFnChXm3b6UNN45x00xYNYcmyhF4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "612",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/update_cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"update_cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clear_cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImU1Yzk3ZDkwYmFiNzNlYTU5ZTljZjAyYjYzYTZjNzkyNjMwYTZlNWZkNTliMmU5ZGNmNGFhYmIzMWExMDYwZjZhNzMzZTBhMjc1MGM2ZmE1In0.eyJhdWQiOiIyIiwianRpIjoiZTVjOTdkOTBiYWI3M2VhNTllOWNmMDJiNjNhNmM3OTI2MzBhNmU1ZmQ1OWIyZTlkY2Y0YWFiYjMxYTEwNjBmNmE3MzNlMGEyNzUwYzZmYTUiLCJpYXQiOjE1NTcwNjU0ODksIm5iZiI6MTU1NzA2NTQ4OSwiZXhwIjoxNTU4MzYxNDg4LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.aEFQHvp5S2w05x5ly1zLBammWu1OflKMQzU570yCVtFgyOwmBMCUiqgQaao6sDkSJBx1lq2g7iUCxLUfw2GB3sOoLe099KJDtK7vl9IYmidW7Qckfu7C22L_r6eLHJk_71wqynZtXwslXO0zyj1yOZ5lJ06M8h2dFqFf9m6WGwcHCiyQRWGwzduoX_pBqmu3rertVjCNrBmZ7yHa7w16IuJ6iIaz3A1YDbEJlO0uNdHy6-jdqkO3efiQfev6c11Z33wVXpMT9rw0iOWF-p9YGLcLmop70xGh9sMYnFIYXncYbKdtm-V3o9-8murhCHi7dm2C_ZjfOYBaeiglz2AyDVrIKMp_SNuAVS4EbvL0KjOEjm5QB698aZo3kKYpS574XiiIdEjnzZ5BWTI8CCn3wkg6VgO0pc97z87oL7wDBcpPRZqUIXPUJIm18h0W4fkmlr9QFYqELTQ7C7NT84urKdBPo4Oyy1eAElSLkNzMB7JdPNDMSISasX-7EcONyrH3mTAu160Wb2H8XXF76D6TVGuKNoeAFEDSbLy0FZsY4OvOHX4ndxRSmwNGAbLask0LKdMHdOcpCC0I5x93FXeBskbYAE1FgXnVJwSi4sHjdABSIZ1WGrlHofomQ-NcD-hhW9DK-hlIvyCoZZDCmFlA4cO--38QukPWDdyezasHbCs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/clear_cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"clear_cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_wishlist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImU1Yzk3ZDkwYmFiNzNlYTU5ZTljZjAyYjYzYTZjNzkyNjMwYTZlNWZkNTliMmU5ZGNmNGFhYmIzMWExMDYwZjZhNzMzZTBhMjc1MGM2ZmE1In0.eyJhdWQiOiIyIiwianRpIjoiZTVjOTdkOTBiYWI3M2VhNTllOWNmMDJiNjNhNmM3OTI2MzBhNmU1ZmQ1OWIyZTlkY2Y0YWFiYjMxYTEwNjBmNmE3MzNlMGEyNzUwYzZmYTUiLCJpYXQiOjE1NTcwNjU0ODksIm5iZiI6MTU1NzA2NTQ4OSwiZXhwIjoxNTU4MzYxNDg4LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.aEFQHvp5S2w05x5ly1zLBammWu1OflKMQzU570yCVtFgyOwmBMCUiqgQaao6sDkSJBx1lq2g7iUCxLUfw2GB3sOoLe099KJDtK7vl9IYmidW7Qckfu7C22L_r6eLHJk_71wqynZtXwslXO0zyj1yOZ5lJ06M8h2dFqFf9m6WGwcHCiyQRWGwzduoX_pBqmu3rertVjCNrBmZ7yHa7w16IuJ6iIaz3A1YDbEJlO0uNdHy6-jdqkO3efiQfev6c11Z33wVXpMT9rw0iOWF-p9YGLcLmop70xGh9sMYnFIYXncYbKdtm-V3o9-8murhCHi7dm2C_ZjfOYBaeiglz2AyDVrIKMp_SNuAVS4EbvL0KjOEjm5QB698aZo3kKYpS574XiiIdEjnzZ5BWTI8CCn3wkg6VgO0pc97z87oL7wDBcpPRZqUIXPUJIm18h0W4fkmlr9QFYqELTQ7C7NT84urKdBPo4Oyy1eAElSLkNzMB7JdPNDMSISasX-7EcONyrH3mTAu160Wb2H8XXF76D6TVGuKNoeAFEDSbLy0FZsY4OvOHX4ndxRSmwNGAbLask0LKdMHdOcpCC0I5x93FXeBskbYAE1FgXnVJwSi4sHjdABSIZ1WGrlHofomQ-NcD-hhW9DK-hlIvyCoZZDCmFlA4cO--38QukPWDdyezasHbCs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "8",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/add_wishlist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"add_wishlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjMzMzA2ZjgyYzAzN2ZjYzllNGFlNjEwODRiY2NkMTA5MzMwNDgxMDRlZjI4YzhkMzI3YzhiNTNlMGFhZDViYmYzMTllMWRhYmExNGQ2OGVhIn0.eyJhdWQiOiIyIiwianRpIjoiMzMzMDZmODJjMDM3ZmNjOWU0YWU2MTA4NGJjY2QxMDkzMzA0ODEwNGVmMjhjOGQzMjdjOGI1M2UwYWFkNWJiZjMxOWUxZGFiYTE0ZDY4ZWEiLCJpYXQiOjE1NTcxMjQ4ODQsIm5iZiI6MTU1NzEyNDg4NCwiZXhwIjoxNTU4NDIwODg0LCJzdWIiOiIxODIiLCJzY29wZXMiOltdfQ.ZL09AAHUMQiupSXAZfU9f1B_DSWw5H3z36eu4fjxMr5c2JnryHwJCXD_TFErZKpRW-Y91fgTsl_ELZbLW71HKwtRM6YtQhepCaJhmVZ0A5t_OQ_EOHN7To3PapKc9vr0y986ZHa83t8W3yP3dzg51XpKLcJjRr7GWWp_jfB08c-4wsxoUxy35VaeUd7LLtIbOiqX1mZSGDgpCVHwY4lryY0uVVi31IByNiHlLOm3fL1SyQtBG80VI8YJrw4Fjfqf_LAQaAllTfTleuYxf8vBII8h1hTCkhnirq7Lvh7Ia-IyMS8zzvixdr1Gw8S9ZyQJWTwo3L5npzS70404eK-0pXv0J7e7-zxqIUxCmSRLAoPAqY6L1EjFqD2BS-uuAiG-jPAQEyRJUWj0sS7_o2r1CCnIWQhiEqKaCa_JiejXFbscBN1lEOeCeJyeKZRE7k9gsx2XEIipiAe8oBeNEb1C1jheb227nEoZfA0DRTr3zRXZSsrRZ0OeE4luxXp3d2k_cU4tFK5XdX1me9rMbjBSttgcJ799UDrd4uZAmQcQ2ETOzG6WY34cO-6DXMkESjQjJG3GuuB7ZCIUMXPjloag9iAM7hAY9bX5jFZ9UUUCSjyR448XLxsWzEEWFwHgl5tFAIJqIt5hpk5bMfVk5Q0I5D7oQbQRVeiuY4s-84zmD28",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "8",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://alsayershop.com/api/getUser",
+							"protocol": "http",
+							"host": [
+								"alsayershop",
+								"com"
+							],
+							"path": [
+								"api",
+								"getUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_wishlist",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZlNDM2YTc2ZGM2OWQ0ZmE4YjdkYjEzYWU5ZDdhMjQzOTNlNmU3NjBiMGMxYTg3MDBmNzE2YjIyZGI4YmVkZDU3ZGIyMWRjZWZjNDM5NjE2In0.eyJhdWQiOiIyIiwianRpIjoiZmU0MzZhNzZkYzY5ZDRmYThiN2RiMTNhZTlkN2EyNDM5M2U2ZTc2MGIwYzFhODcwMGY3MTZiMjJkYjhiZWRkNTdkYjIxZGNlZmM0Mzk2MTYiLCJpYXQiOjE1NTcxMzA0MTQsIm5iZiI6MTU1NzEzMDQxNCwiZXhwIjoxNTU4NDI2NDE0LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.MCx4ZIp1LGLszDuqcwqwvIryi97CUU9RbksSdFcwD_YCl8eYL3PevBzL0R16JyifEvy1S9lF183MBf2inlcLV5G8qhWhke3ScZPOMT4lk3rIkH0Q4pjtJmYRnVT1-nvU9SVYt6SH3cLQCUu2Wcmd7xBT_T5a0rOl6ylO1e8KfL4SmDV38mEC8wKF0OYs5E4Pny5OlSWE4-nxkiPD5ftGI-vqNsIVbM3NfAwtiCgeNpf91Y5wiGRunW3HJObZMz36bDl_Z4I6GYbsKHNHb-W7SQ582N-KR_7WXz2QJ7xc-73-Ch4YPiQeYF2FZZSCd-360py3ZauPXkTOTTSdwspiBSd6e-FqGTpNbn54Ofi-dAMt9nOg6P7tQRtA4nDYGpKL-FDmfcsT0zBdyP0h_DMBUYbJBS5IeexvtByiL0YdC0tB0gcyltMjAUY2g1Jtyy-WUxqyFfJZA-Pc6bLWZ-C071K8rdIp76stMEdkzZaX08nKyqdJ-tqJrDin_zehx0163SCSb-c_yZ0gDvTqIEEpveXqUG4oxML77O_je1QKi_hfcDmzTpFWZ0ARiOUf-3dq01PS06ynlAqYhO6Zcy_u7l9Vtzdop8iV8Nrf21U8xCfo1pzbVADJq9wy04xyX8P6B0F1aOn7GXewL-Ih49usMlp74rhiEaerIP4pkNkJmKI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/show_wishlist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"show_wishlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove_wishlist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZlNDM2YTc2ZGM2OWQ0ZmE4YjdkYjEzYWU5ZDdhMjQzOTNlNmU3NjBiMGMxYTg3MDBmNzE2YjIyZGI4YmVkZDU3ZGIyMWRjZWZjNDM5NjE2In0.eyJhdWQiOiIyIiwianRpIjoiZmU0MzZhNzZkYzY5ZDRmYThiN2RiMTNhZTlkN2EyNDM5M2U2ZTc2MGIwYzFhODcwMGY3MTZiMjJkYjhiZWRkNTdkYjIxZGNlZmM0Mzk2MTYiLCJpYXQiOjE1NTcxMzA0MTQsIm5iZiI6MTU1NzEzMDQxNCwiZXhwIjoxNTU4NDI2NDE0LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.MCx4ZIp1LGLszDuqcwqwvIryi97CUU9RbksSdFcwD_YCl8eYL3PevBzL0R16JyifEvy1S9lF183MBf2inlcLV5G8qhWhke3ScZPOMT4lk3rIkH0Q4pjtJmYRnVT1-nvU9SVYt6SH3cLQCUu2Wcmd7xBT_T5a0rOl6ylO1e8KfL4SmDV38mEC8wKF0OYs5E4Pny5OlSWE4-nxkiPD5ftGI-vqNsIVbM3NfAwtiCgeNpf91Y5wiGRunW3HJObZMz36bDl_Z4I6GYbsKHNHb-W7SQ582N-KR_7WXz2QJ7xc-73-Ch4YPiQeYF2FZZSCd-360py3ZauPXkTOTTSdwspiBSd6e-FqGTpNbn54Ofi-dAMt9nOg6P7tQRtA4nDYGpKL-FDmfcsT0zBdyP0h_DMBUYbJBS5IeexvtByiL0YdC0tB0gcyltMjAUY2g1Jtyy-WUxqyFfJZA-Pc6bLWZ-C071K8rdIp76stMEdkzZaX08nKyqdJ-tqJrDin_zehx0163SCSb-c_yZ0gDvTqIEEpveXqUG4oxML77O_je1QKi_hfcDmzTpFWZ0ARiOUf-3dq01PS06ynlAqYhO6Zcy_u7l9Vtzdop8iV8Nrf21U8xCfo1pzbVADJq9wy04xyX8P6B0F1aOn7GXewL-Ih49usMlp74rhiEaerIP4pkNkJmKI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "wishlist_id",
+									"value": "189",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/remove_wishlist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"remove_wishlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clear_wishlist",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZlNDM2YTc2ZGM2OWQ0ZmE4YjdkYjEzYWU5ZDdhMjQzOTNlNmU3NjBiMGMxYTg3MDBmNzE2YjIyZGI4YmVkZDU3ZGIyMWRjZWZjNDM5NjE2In0.eyJhdWQiOiIyIiwianRpIjoiZmU0MzZhNzZkYzY5ZDRmYThiN2RiMTNhZTlkN2EyNDM5M2U2ZTc2MGIwYzFhODcwMGY3MTZiMjJkYjhiZWRkNTdkYjIxZGNlZmM0Mzk2MTYiLCJpYXQiOjE1NTcxMzA0MTQsIm5iZiI6MTU1NzEzMDQxNCwiZXhwIjoxNTU4NDI2NDE0LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.MCx4ZIp1LGLszDuqcwqwvIryi97CUU9RbksSdFcwD_YCl8eYL3PevBzL0R16JyifEvy1S9lF183MBf2inlcLV5G8qhWhke3ScZPOMT4lk3rIkH0Q4pjtJmYRnVT1-nvU9SVYt6SH3cLQCUu2Wcmd7xBT_T5a0rOl6ylO1e8KfL4SmDV38mEC8wKF0OYs5E4Pny5OlSWE4-nxkiPD5ftGI-vqNsIVbM3NfAwtiCgeNpf91Y5wiGRunW3HJObZMz36bDl_Z4I6GYbsKHNHb-W7SQ582N-KR_7WXz2QJ7xc-73-Ch4YPiQeYF2FZZSCd-360py3ZauPXkTOTTSdwspiBSd6e-FqGTpNbn54Ofi-dAMt9nOg6P7tQRtA4nDYGpKL-FDmfcsT0zBdyP0h_DMBUYbJBS5IeexvtByiL0YdC0tB0gcyltMjAUY2g1Jtyy-WUxqyFfJZA-Pc6bLWZ-C071K8rdIp76stMEdkzZaX08nKyqdJ-tqJrDin_zehx0163SCSb-c_yZ0gDvTqIEEpveXqUG4oxML77O_je1QKi_hfcDmzTpFWZ0ARiOUf-3dq01PS06ynlAqYhO6Zcy_u7l9Vtzdop8iV8Nrf21U8xCfo1pzbVADJq9wy04xyX8P6B0F1aOn7GXewL-Ih49usMlp74rhiEaerIP4pkNkJmKI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/clear_wishlist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"clear_wishlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contactus",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZlNDM2YTc2ZGM2OWQ0ZmE4YjdkYjEzYWU5ZDdhMjQzOTNlNmU3NjBiMGMxYTg3MDBmNzE2YjIyZGI4YmVkZDU3ZGIyMWRjZWZjNDM5NjE2In0.eyJhdWQiOiIyIiwianRpIjoiZmU0MzZhNzZkYzY5ZDRmYThiN2RiMTNhZTlkN2EyNDM5M2U2ZTc2MGIwYzFhODcwMGY3MTZiMjJkYjhiZWRkNTdkYjIxZGNlZmM0Mzk2MTYiLCJpYXQiOjE1NTcxMzA0MTQsIm5iZiI6MTU1NzEzMDQxNCwiZXhwIjoxNTU4NDI2NDE0LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.MCx4ZIp1LGLszDuqcwqwvIryi97CUU9RbksSdFcwD_YCl8eYL3PevBzL0R16JyifEvy1S9lF183MBf2inlcLV5G8qhWhke3ScZPOMT4lk3rIkH0Q4pjtJmYRnVT1-nvU9SVYt6SH3cLQCUu2Wcmd7xBT_T5a0rOl6ylO1e8KfL4SmDV38mEC8wKF0OYs5E4Pny5OlSWE4-nxkiPD5ftGI-vqNsIVbM3NfAwtiCgeNpf91Y5wiGRunW3HJObZMz36bDl_Z4I6GYbsKHNHb-W7SQ582N-KR_7WXz2QJ7xc-73-Ch4YPiQeYF2FZZSCd-360py3ZauPXkTOTTSdwspiBSd6e-FqGTpNbn54Ofi-dAMt9nOg6P7tQRtA4nDYGpKL-FDmfcsT0zBdyP0h_DMBUYbJBS5IeexvtByiL0YdC0tB0gcyltMjAUY2g1Jtyy-WUxqyFfJZA-Pc6bLWZ-C071K8rdIp76stMEdkzZaX08nKyqdJ-tqJrDin_zehx0163SCSb-c_yZ0gDvTqIEEpveXqUG4oxML77O_je1QKi_hfcDmzTpFWZ0ARiOUf-3dq01PS06ynlAqYhO6Zcy_u7l9Vtzdop8iV8Nrf21U8xCfo1pzbVADJq9wy04xyX8P6B0F1aOn7GXewL-Ih49usMlp74rhiEaerIP4pkNkJmKI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/contactus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"contactus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZlNDM2YTc2ZGM2OWQ0ZmE4YjdkYjEzYWU5ZDdhMjQzOTNlNmU3NjBiMGMxYTg3MDBmNzE2YjIyZGI4YmVkZDU3ZGIyMWRjZWZjNDM5NjE2In0.eyJhdWQiOiIyIiwianRpIjoiZmU0MzZhNzZkYzY5ZDRmYThiN2RiMTNhZTlkN2EyNDM5M2U2ZTc2MGIwYzFhODcwMGY3MTZiMjJkYjhiZWRkNTdkYjIxZGNlZmM0Mzk2MTYiLCJpYXQiOjE1NTcxMzA0MTQsIm5iZiI6MTU1NzEzMDQxNCwiZXhwIjoxNTU4NDI2NDE0LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.MCx4ZIp1LGLszDuqcwqwvIryi97CUU9RbksSdFcwD_YCl8eYL3PevBzL0R16JyifEvy1S9lF183MBf2inlcLV5G8qhWhke3ScZPOMT4lk3rIkH0Q4pjtJmYRnVT1-nvU9SVYt6SH3cLQCUu2Wcmd7xBT_T5a0rOl6ylO1e8KfL4SmDV38mEC8wKF0OYs5E4Pny5OlSWE4-nxkiPD5ftGI-vqNsIVbM3NfAwtiCgeNpf91Y5wiGRunW3HJObZMz36bDl_Z4I6GYbsKHNHb-W7SQ582N-KR_7WXz2QJ7xc-73-Ch4YPiQeYF2FZZSCd-360py3ZauPXkTOTTSdwspiBSd6e-FqGTpNbn54Ofi-dAMt9nOg6P7tQRtA4nDYGpKL-FDmfcsT0zBdyP0h_DMBUYbJBS5IeexvtByiL0YdC0tB0gcyltMjAUY2g1Jtyy-WUxqyFfJZA-Pc6bLWZ-C071K8rdIp76stMEdkzZaX08nKyqdJ-tqJrDin_zehx0163SCSb-c_yZ0gDvTqIEEpveXqUG4oxML77O_je1QKi_hfcDmzTpFWZ0ARiOUf-3dq01PS06ynlAqYhO6Zcy_u7l9Vtzdop8iV8Nrf21U8xCfo1pzbVADJq9wy04xyX8P6B0F1aOn7GXewL-Ih49usMlp74rhiEaerIP4pkNkJmKI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "eman@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "hello again",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "test sub",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get subcategory by category id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZlNDM2YTc2ZGM2OWQ0ZmE4YjdkYjEzYWU5ZDdhMjQzOTNlNmU3NjBiMGMxYTg3MDBmNzE2YjIyZGI4YmVkZDU3ZGIyMWRjZWZjNDM5NjE2In0.eyJhdWQiOiIyIiwianRpIjoiZmU0MzZhNzZkYzY5ZDRmYThiN2RiMTNhZTlkN2EyNDM5M2U2ZTc2MGIwYzFhODcwMGY3MTZiMjJkYjhiZWRkNTdkYjIxZGNlZmM0Mzk2MTYiLCJpYXQiOjE1NTcxMzA0MTQsIm5iZiI6MTU1NzEzMDQxNCwiZXhwIjoxNTU4NDI2NDE0LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.MCx4ZIp1LGLszDuqcwqwvIryi97CUU9RbksSdFcwD_YCl8eYL3PevBzL0R16JyifEvy1S9lF183MBf2inlcLV5G8qhWhke3ScZPOMT4lk3rIkH0Q4pjtJmYRnVT1-nvU9SVYt6SH3cLQCUu2Wcmd7xBT_T5a0rOl6ylO1e8KfL4SmDV38mEC8wKF0OYs5E4Pny5OlSWE4-nxkiPD5ftGI-vqNsIVbM3NfAwtiCgeNpf91Y5wiGRunW3HJObZMz36bDl_Z4I6GYbsKHNHb-W7SQ582N-KR_7WXz2QJ7xc-73-Ch4YPiQeYF2FZZSCd-360py3ZauPXkTOTTSdwspiBSd6e-FqGTpNbn54Ofi-dAMt9nOg6P7tQRtA4nDYGpKL-FDmfcsT0zBdyP0h_DMBUYbJBS5IeexvtByiL0YdC0tB0gcyltMjAUY2g1Jtyy-WUxqyFfJZA-Pc6bLWZ-C071K8rdIp76stMEdkzZaX08nKyqdJ-tqJrDin_zehx0163SCSb-c_yZ0gDvTqIEEpveXqUG4oxML77O_je1QKi_hfcDmzTpFWZ0ARiOUf-3dq01PS06ynlAqYhO6Zcy_u7l9Vtzdop8iV8Nrf21U8xCfo1pzbVADJq9wy04xyX8P6B0F1aOn7GXewL-Ih49usMlp74rhiEaerIP4pkNkJmKI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "eman@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "hello again",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "test sub",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/category/16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"category",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImViMjJkNWExNGI2MWJmNmVmODBiYTk2NDNhNWYxMDU0NTNhZmFiNThkNDk0YmFkYzc3OTc3ZGU3NGE5Y2NkNGM4MjNhNGRhOTRjYzMzN2Y5In0.eyJhdWQiOiIyIiwianRpIjoiZWIyMmQ1YTE0YjYxYmY2ZWY4MGJhOTY0M2E1ZjEwNTQ1M2FmYWI1OGQ0OTRiYWRjNzc5NzdkZTc0YTljY2Q0YzgyM2E0ZGE5NGNjMzM3ZjkiLCJpYXQiOjE1NTcxNDUyODQsIm5iZiI6MTU1NzE0NTI4NCwiZXhwIjoxNTU4NDQxMjgzLCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.MqJC9eDfgoFwBiP8V4zJQO65ZBF6qV1xGmZukqafY0vMky2UMnGDcUqRe0474sUr5stZmZfTwqcxGXApR21pkZFxvl9BrMSxjHWVqLgn--xgsA_FCvSSeZ8XL3_dqZFKjAeQoQyOqkX0QWvCNYaC1W_qlJ0GCk-0MS49p3NyccxVJxfJnwC2jG-ex1xGjI3lLezsUin_2cCQ4CjUNN-en7y6nSzmYDZJKDf56-iS2qKF9HeqcSGgMMd8mJwSCIOyJuHYCXI_4GJiRhWyv8Ivk2VRawANb9Cds1SNjZCst16U72uUT7lqfVRpsVfeKhIG1xkRl3t6leyEBHeuz0t9_D2nuPvgDL12Bu4GCRTgKsTmaDULiKxM0csq8sYjDHk1Dpiss6tqYFFMBNTcAC0FP5JEgIqJyTddVrMXBZxZJDrTrGr6feJ9gJVBqnBQd2EUbPiZdnSUFqWYZTnviKd7wDcrrvXC-TQ0PeEK7ckdWoop0dEt2n0_YdkAXGRuBRCKllkh_b-D8lSAekb3xSXSzBvtapbWVRIjMub8-sUJG2Y8agypneEdc5GWO1IEkOFXqKuyZXjuAZWDxVX84vdR9l_VotGACLRic8yrv2W2XahRomPEHM4J9CGcQxByNozjiSwDgC_6tGGzxpzyn7JgjQuD7xy3kMYQrI2VseHdXTY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "review",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/add_review",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"add_review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategoryProducts/9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZlNDM2YTc2ZGM2OWQ0ZmE4YjdkYjEzYWU5ZDdhMjQzOTNlNmU3NjBiMGMxYTg3MDBmNzE2YjIyZGI4YmVkZDU3ZGIyMWRjZWZjNDM5NjE2In0.eyJhdWQiOiIyIiwianRpIjoiZmU0MzZhNzZkYzY5ZDRmYThiN2RiMTNhZTlkN2EyNDM5M2U2ZTc2MGIwYzFhODcwMGY3MTZiMjJkYjhiZWRkNTdkYjIxZGNlZmM0Mzk2MTYiLCJpYXQiOjE1NTcxMzA0MTQsIm5iZiI6MTU1NzEzMDQxNCwiZXhwIjoxNTU4NDI2NDE0LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.MCx4ZIp1LGLszDuqcwqwvIryi97CUU9RbksSdFcwD_YCl8eYL3PevBzL0R16JyifEvy1S9lF183MBf2inlcLV5G8qhWhke3ScZPOMT4lk3rIkH0Q4pjtJmYRnVT1-nvU9SVYt6SH3cLQCUu2Wcmd7xBT_T5a0rOl6ylO1e8KfL4SmDV38mEC8wKF0OYs5E4Pny5OlSWE4-nxkiPD5ftGI-vqNsIVbM3NfAwtiCgeNpf91Y5wiGRunW3HJObZMz36bDl_Z4I6GYbsKHNHb-W7SQ582N-KR_7WXz2QJ7xc-73-Ch4YPiQeYF2FZZSCd-360py3ZauPXkTOTTSdwspiBSd6e-FqGTpNbn54Ofi-dAMt9nOg6P7tQRtA4nDYGpKL-FDmfcsT0zBdyP0h_DMBUYbJBS5IeexvtByiL0YdC0tB0gcyltMjAUY2g1Jtyy-WUxqyFfJZA-Pc6bLWZ-C071K8rdIp76stMEdkzZaX08nKyqdJ-tqJrDin_zehx0163SCSb-c_yZ0gDvTqIEEpveXqUG4oxML77O_je1QKi_hfcDmzTpFWZ0ARiOUf-3dq01PS06ynlAqYhO6Zcy_u7l9Vtzdop8iV8Nrf21U8xCfo1pzbVADJq9wy04xyX8P6B0F1aOn7GXewL-Ih49usMlp74rhiEaerIP4pkNkJmKI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/getCategoryProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"getCategoryProducts"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "c",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategoryProducts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZlNDM2YTc2ZGM2OWQ0ZmE4YjdkYjEzYWU5ZDdhMjQzOTNlNmU3NjBiMGMxYTg3MDBmNzE2YjIyZGI4YmVkZDU3ZGIyMWRjZWZjNDM5NjE2In0.eyJhdWQiOiIyIiwianRpIjoiZmU0MzZhNzZkYzY5ZDRmYThiN2RiMTNhZTlkN2EyNDM5M2U2ZTc2MGIwYzFhODcwMGY3MTZiMjJkYjhiZWRkNTdkYjIxZGNlZmM0Mzk2MTYiLCJpYXQiOjE1NTcxMzA0MTQsIm5iZiI6MTU1NzEzMDQxNCwiZXhwIjoxNTU4NDI2NDE0LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.MCx4ZIp1LGLszDuqcwqwvIryi97CUU9RbksSdFcwD_YCl8eYL3PevBzL0R16JyifEvy1S9lF183MBf2inlcLV5G8qhWhke3ScZPOMT4lk3rIkH0Q4pjtJmYRnVT1-nvU9SVYt6SH3cLQCUu2Wcmd7xBT_T5a0rOl6ylO1e8KfL4SmDV38mEC8wKF0OYs5E4Pny5OlSWE4-nxkiPD5ftGI-vqNsIVbM3NfAwtiCgeNpf91Y5wiGRunW3HJObZMz36bDl_Z4I6GYbsKHNHb-W7SQ582N-KR_7WXz2QJ7xc-73-Ch4YPiQeYF2FZZSCd-360py3ZauPXkTOTTSdwspiBSd6e-FqGTpNbn54Ofi-dAMt9nOg6P7tQRtA4nDYGpKL-FDmfcsT0zBdyP0h_DMBUYbJBS5IeexvtByiL0YdC0tB0gcyltMjAUY2g1Jtyy-WUxqyFfJZA-Pc6bLWZ-C071K8rdIp76stMEdkzZaX08nKyqdJ-tqJrDin_zehx0163SCSb-c_yZ0gDvTqIEEpveXqUG4oxML77O_je1QKi_hfcDmzTpFWZ0ARiOUf-3dq01PS06ynlAqYhO6Zcy_u7l9Vtzdop8iV8Nrf21U8xCfo1pzbVADJq9wy04xyX8P6B0F1aOn7GXewL-Ih49usMlp74rhiEaerIP4pkNkJmKI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/getCategoryProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"getCategoryProducts"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "c",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getCategoryProducts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/canon/public/api/productgroups",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"canon",
+										"public",
+										"api",
+										"productgroups"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "c",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 07 May 2019 08:51:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.33 (Win32) OpenSSL/1.1.0h PHP/7.2.7"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2238"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"latest_products\": {\n        \"data\": [\n            {\n                \"id\": 454,\n                \"name\": \"Canon CB-2LBE Battery Charger\",\n                \"rating\": 0,\n                \"brand\": \"Canon\",\n                \"image\": \"http://localhost:8080/canon/public/images/products/1352115351.png\",\n                \"old_price\": 22,\n                \"newp_rice\": null,\n                \"in_wishlist\": false,\n                \"wishlist_id\": null,\n                \"main_category\": [\n                    {\n                        \"name\": \"Accessories\",\n                        \"id\": 31\n                    }\n                ],\n                \"sub_category\": [\n                    {\n                        \"name\": \"Chargers\",\n                        \"id\": 37\n                    }\n                ]\n            },\n            {\n                \"id\": 453,\n                \"name\": \"Vanguard Quovio 51 Backpack\",\n                \"rating\": 0,\n                \"brand\": \"vanguard\",\n                \"image\": \"http://localhost:8080/canon/public/images/products/1439339930.png\",\n                \"old_price\": 39,\n                \"newp_rice\": null,\n                \"in_wishlist\": false,\n                \"wishlist_id\": null,\n                \"main_category\": [\n                    {\n                        \"name\": \"Accessories\",\n                        \"id\": 31\n                    }\n                ],\n                \"sub_category\": [\n                    {\n                        \"name\": \"Bags\",\n                        \"id\": 33\n                    }\n                ]\n            }\n        ]\n    },\n    \"special_products\": {\n        \"data\": [\n            {\n                \"id\": 404,\n                \"name\": \"CANON EOS 750D Camera + Canon EF 18-135mm Lens & FREE GIFT Bower Flash SFD 926 + FREE 8GB MEMORY CARD\",\n                \"rating\": 0,\n                \"brand\": \"Canon\",\n                \"image\": \"http://localhost:8080/canon/public/images/products/2128302892.png\",\n                \"old_price\": 195,\n                \"newp_rice\": null,\n                \"in_wishlist\": false,\n                \"wishlist_id\": null,\n                \"main_category\": [\n                    {\n                        \"name\": \"Cameras\",\n                        \"id\": 1\n                    }\n                ],\n                \"sub_category\": [\n                    {\n                        \"name\": \"EOS DSLR Cameras\",\n                        \"id\": 9\n                    }\n                ]\n            },\n            {\n                \"id\": 403,\n                \"name\": \"CANON EOS 750D WITH 18-55MM LENS + Tamron 18-200mm\\u0003f/3.5-6.3 Di II VC Lens & FREE GIFT VANGUARD SYDNEY II 22GY + FREE 8GB MEMORY CARD\",\n                \"rating\": 0,\n                \"brand\": \"Canon\",\n                \"image\": \"http://localhost:8080/canon/public/images/products/1927974749.png\",\n                \"old_price\": 199,\n                \"newp_rice\": null,\n                \"in_wishlist\": false,\n                \"wishlist_id\": null,\n                \"main_category\": [\n                    {\n                        \"name\": \"Cameras\",\n                        \"id\": 1\n                    }\n                ],\n                \"sub_category\": [\n                    {\n                        \"name\": \"EOS DSLR Cameras\",\n                        \"id\": 9\n                    }\n                ]\n            }\n        ]\n    },\n    \"most_sells\": {\n        \"data\": [\n            {\n                \"id\": 256,\n                \"name\": \"CLBP CARTRIDGE 729 BK EUR\",\n                \"rating\": 0,\n                \"brand\": \"Canon\",\n                \"image\": \"http://localhost:8080/canon/public/images/products/764849436.jpg\",\n                \"old_price\": 19.5,\n                \"newp_rice\": null,\n                \"in_wishlist\": false,\n                \"wishlist_id\": null,\n                \"main_category\": [\n                    {\n                        \"name\": \"Printers\",\n                        \"id\": 16\n                    }\n                ],\n                \"sub_category\": [\n                    {\n                        \"name\": \"Ink, Toner, Paper\",\n                        \"id\": 19\n                    }\n                ]\n            },\n            {\n                \"id\": 257,\n                \"name\": \"CLBP CARTRIDGE 729 C EUR\",\n                \"rating\": 0,\n                \"brand\": \"Canon\",\n                \"image\": \"http://localhost:8080/canon/public/images/products/1111456484.jpg\",\n                \"old_price\": 21.8,\n                \"newp_rice\": null,\n                \"in_wishlist\": false,\n                \"wishlist_id\": null,\n                \"main_category\": [\n                    {\n                        \"name\": \"Printers\",\n                        \"id\": 16\n                    }\n                ],\n                \"sub_category\": [\n                    {\n                        \"name\": \"Ink, Toner, Paper\",\n                        \"id\": 19\n                    }\n                ]\n            }\n        ]\n    },\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "getCategoryProducts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZlNDM2YTc2ZGM2OWQ0ZmE4YjdkYjEzYWU5ZDdhMjQzOTNlNmU3NjBiMGMxYTg3MDBmNzE2YjIyZGI4YmVkZDU3ZGIyMWRjZWZjNDM5NjE2In0.eyJhdWQiOiIyIiwianRpIjoiZmU0MzZhNzZkYzY5ZDRmYThiN2RiMTNhZTlkN2EyNDM5M2U2ZTc2MGIwYzFhODcwMGY3MTZiMjJkYjhiZWRkNTdkYjIxZGNlZmM0Mzk2MTYiLCJpYXQiOjE1NTcxMzA0MTQsIm5iZiI6MTU1NzEzMDQxNCwiZXhwIjoxNTU4NDI2NDE0LCJzdWIiOiIxNTQiLCJzY29wZXMiOltdfQ.MCx4ZIp1LGLszDuqcwqwvIryi97CUU9RbksSdFcwD_YCl8eYL3PevBzL0R16JyifEvy1S9lF183MBf2inlcLV5G8qhWhke3ScZPOMT4lk3rIkH0Q4pjtJmYRnVT1-nvU9SVYt6SH3cLQCUu2Wcmd7xBT_T5a0rOl6ylO1e8KfL4SmDV38mEC8wKF0OYs5E4Pny5OlSWE4-nxkiPD5ftGI-vqNsIVbM3NfAwtiCgeNpf91Y5wiGRunW3HJObZMz36bDl_Z4I6GYbsKHNHb-W7SQ582N-KR_7WXz2QJ7xc-73-Ch4YPiQeYF2FZZSCd-360py3ZauPXkTOTTSdwspiBSd6e-FqGTpNbn54Ofi-dAMt9nOg6P7tQRtA4nDYGpKL-FDmfcsT0zBdyP0h_DMBUYbJBS5IeexvtByiL0YdC0tB0gcyltMjAUY2g1Jtyy-WUxqyFfJZA-Pc6bLWZ-C071K8rdIp76stMEdkzZaX08nKyqdJ-tqJrDin_zehx0163SCSb-c_yZ0gDvTqIEEpveXqUG4oxML77O_je1QKi_hfcDmzTpFWZ0ARiOUf-3dq01PS06ynlAqYhO6Zcy_u7l9Vtzdop8iV8Nrf21U8xCfo1pzbVADJq9wy04xyX8P6B0F1aOn7GXewL-Ih49usMlp74rhiEaerIP4pkNkJmKI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "special",
+									"description": "sells,latest,special",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/getCategoryProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"getCategoryProducts"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "c",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all_address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1NjE0NTA1YTRjZWQ5YmY3MGM0YzYyM2E2MDZjYjZmOGVjNDEyMzc3MGY3MmU1ZWVmZTVjZjcyNDUwMTAwZTA5M2JlNmUzOGFmOWQxM2NlIn0.eyJhdWQiOiIyIiwianRpIjoiYTU2MTQ1MDVhNGNlZDliZjcwYzRjNjIzYTYwNmNiNmY4ZWM0MTIzNzcwZjcyZTVlZWZlNWNmNzI0NTAxMDBlMDkzYmU2ZTM4YWY5ZDEzY2UiLCJpYXQiOjE1NTcyMjcyODksIm5iZiI6MTU1NzIyNzI4OSwiZXhwIjoxNTU4NTIzMjg2LCJzdWIiOiIxODMiLCJzY29wZXMiOltdfQ.hVfPT1i57s_-KWhQ4-i0WVh8ettVgrVbNJv1odxitXYhs1yZqZHAk_guYAb-x3wYmiYqoFz4fgxJCjIopMVwbvYUQjhSoV-VwhmxGRQQIYhnwX5tF3vgeOMrE6EZ58WkmsFCFggZmVFFh1SNBHiIXr4bmLiTK5smou2xnggAdCmFOfuBNhnMns54sUlaYEjOMjl3l18BtwkAH5Z0u14tTJc0qEWvObtPF5H0ROmM72PMW7XFtiEZ-gg3ven6AVThUwSxjN4wC4sZ7ivW0Jcc7Qrndy_RU0mRmPRCZrUgH9tbmBPGevRgRCqsaYoNCGQyuekluAUIDgITBlk2Apzor4QUyi8DAIVOo4Txy5Mx29nJAvYw7e-TqlamYzhInMiVsnQOX4SUYB7G-8k7Jsc_GtUq1DjuSf2aWoKEo8uzWXQe0kk2qcZBjdvBklEqMdvMP9WbabRRXHnfNiPrp9l6R0Tej0eODiVY-iHTLAtzFm5vBqUKO-rMaERe061gYaYqDJsgsb4DD8L_UFEcev9VCPpu4ZtBzon9Mm2CQotnqBt8uCk3mb3pntzW5AGe0rW_DBrABFG1pqtcLmek8C35IJtR1DcpmIsQUN6kgo8hxiUYuCD3fPswJnKI_snHhUc6JAdp1RgVHD9eJi3q7ty_FS699VNgaxR7kJak6eBg2uU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/all_address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"all_address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all_shipments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1NjE0NTA1YTRjZWQ5YmY3MGM0YzYyM2E2MDZjYjZmOGVjNDEyMzc3MGY3MmU1ZWVmZTVjZjcyNDUwMTAwZTA5M2JlNmUzOGFmOWQxM2NlIn0.eyJhdWQiOiIyIiwianRpIjoiYTU2MTQ1MDVhNGNlZDliZjcwYzRjNjIzYTYwNmNiNmY4ZWM0MTIzNzcwZjcyZTVlZWZlNWNmNzI0NTAxMDBlMDkzYmU2ZTM4YWY5ZDEzY2UiLCJpYXQiOjE1NTcyMjcyODksIm5iZiI6MTU1NzIyNzI4OSwiZXhwIjoxNTU4NTIzMjg2LCJzdWIiOiIxODMiLCJzY29wZXMiOltdfQ.hVfPT1i57s_-KWhQ4-i0WVh8ettVgrVbNJv1odxitXYhs1yZqZHAk_guYAb-x3wYmiYqoFz4fgxJCjIopMVwbvYUQjhSoV-VwhmxGRQQIYhnwX5tF3vgeOMrE6EZ58WkmsFCFggZmVFFh1SNBHiIXr4bmLiTK5smou2xnggAdCmFOfuBNhnMns54sUlaYEjOMjl3l18BtwkAH5Z0u14tTJc0qEWvObtPF5H0ROmM72PMW7XFtiEZ-gg3ven6AVThUwSxjN4wC4sZ7ivW0Jcc7Qrndy_RU0mRmPRCZrUgH9tbmBPGevRgRCqsaYoNCGQyuekluAUIDgITBlk2Apzor4QUyi8DAIVOo4Txy5Mx29nJAvYw7e-TqlamYzhInMiVsnQOX4SUYB7G-8k7Jsc_GtUq1DjuSf2aWoKEo8uzWXQe0kk2qcZBjdvBklEqMdvMP9WbabRRXHnfNiPrp9l6R0Tej0eODiVY-iHTLAtzFm5vBqUKO-rMaERe061gYaYqDJsgsb4DD8L_UFEcev9VCPpu4ZtBzon9Mm2CQotnqBt8uCk3mb3pntzW5AGe0rW_DBrABFG1pqtcLmek8C35IJtR1DcpmIsQUN6kgo8hxiUYuCD3fPswJnKI_snHhUc6JAdp1RgVHD9eJi3q7ty_FS699VNgaxR7kJak6eBg2uU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/all_shipments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"all_shipments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save_order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1NjE0NTA1YTRjZWQ5YmY3MGM0YzYyM2E2MDZjYjZmOGVjNDEyMzc3MGY3MmU1ZWVmZTVjZjcyNDUwMTAwZTA5M2JlNmUzOGFmOWQxM2NlIn0.eyJhdWQiOiIyIiwianRpIjoiYTU2MTQ1MDVhNGNlZDliZjcwYzRjNjIzYTYwNmNiNmY4ZWM0MTIzNzcwZjcyZTVlZWZlNWNmNzI0NTAxMDBlMDkzYmU2ZTM4YWY5ZDEzY2UiLCJpYXQiOjE1NTcyMjcyODksIm5iZiI6MTU1NzIyNzI4OSwiZXhwIjoxNTU4NTIzMjg2LCJzdWIiOiIxODMiLCJzY29wZXMiOltdfQ.hVfPT1i57s_-KWhQ4-i0WVh8ettVgrVbNJv1odxitXYhs1yZqZHAk_guYAb-x3wYmiYqoFz4fgxJCjIopMVwbvYUQjhSoV-VwhmxGRQQIYhnwX5tF3vgeOMrE6EZ58WkmsFCFggZmVFFh1SNBHiIXr4bmLiTK5smou2xnggAdCmFOfuBNhnMns54sUlaYEjOMjl3l18BtwkAH5Z0u14tTJc0qEWvObtPF5H0ROmM72PMW7XFtiEZ-gg3ven6AVThUwSxjN4wC4sZ7ivW0Jcc7Qrndy_RU0mRmPRCZrUgH9tbmBPGevRgRCqsaYoNCGQyuekluAUIDgITBlk2Apzor4QUyi8DAIVOo4Txy5Mx29nJAvYw7e-TqlamYzhInMiVsnQOX4SUYB7G-8k7Jsc_GtUq1DjuSf2aWoKEo8uzWXQe0kk2qcZBjdvBklEqMdvMP9WbabRRXHnfNiPrp9l6R0Tej0eODiVY-iHTLAtzFm5vBqUKO-rMaERe061gYaYqDJsgsb4DD8L_UFEcev9VCPpu4ZtBzon9Mm2CQotnqBt8uCk3mb3pntzW5AGe0rW_DBrABFG1pqtcLmek8C35IJtR1DcpmIsQUN6kgo8hxiUYuCD3fPswJnKI_snHhUc6JAdp1RgVHD9eJi3q7ty_FS699VNgaxR7kJak6eBg2uU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "183",
+									"type": "text"
+								},
+								{
+									"key": "address_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/save_order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"save_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_orders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1NjE0NTA1YTRjZWQ5YmY3MGM0YzYyM2E2MDZjYjZmOGVjNDEyMzc3MGY3MmU1ZWVmZTVjZjcyNDUwMTAwZTA5M2JlNmUzOGFmOWQxM2NlIn0.eyJhdWQiOiIyIiwianRpIjoiYTU2MTQ1MDVhNGNlZDliZjcwYzRjNjIzYTYwNmNiNmY4ZWM0MTIzNzcwZjcyZTVlZWZlNWNmNzI0NTAxMDBlMDkzYmU2ZTM4YWY5ZDEzY2UiLCJpYXQiOjE1NTcyMjcyODksIm5iZiI6MTU1NzIyNzI4OSwiZXhwIjoxNTU4NTIzMjg2LCJzdWIiOiIxODMiLCJzY29wZXMiOltdfQ.hVfPT1i57s_-KWhQ4-i0WVh8ettVgrVbNJv1odxitXYhs1yZqZHAk_guYAb-x3wYmiYqoFz4fgxJCjIopMVwbvYUQjhSoV-VwhmxGRQQIYhnwX5tF3vgeOMrE6EZ58WkmsFCFggZmVFFh1SNBHiIXr4bmLiTK5smou2xnggAdCmFOfuBNhnMns54sUlaYEjOMjl3l18BtwkAH5Z0u14tTJc0qEWvObtPF5H0ROmM72PMW7XFtiEZ-gg3ven6AVThUwSxjN4wC4sZ7ivW0Jcc7Qrndy_RU0mRmPRCZrUgH9tbmBPGevRgRCqsaYoNCGQyuekluAUIDgITBlk2Apzor4QUyi8DAIVOo4Txy5Mx29nJAvYw7e-TqlamYzhInMiVsnQOX4SUYB7G-8k7Jsc_GtUq1DjuSf2aWoKEo8uzWXQe0kk2qcZBjdvBklEqMdvMP9WbabRRXHnfNiPrp9l6R0Tej0eODiVY-iHTLAtzFm5vBqUKO-rMaERe061gYaYqDJsgsb4DD8L_UFEcev9VCPpu4ZtBzon9Mm2CQotnqBt8uCk3mb3pntzW5AGe0rW_DBrABFG1pqtcLmek8C35IJtR1DcpmIsQUN6kgo8hxiUYuCD3fPswJnKI_snHhUc6JAdp1RgVHD9eJi3q7ty_FS699VNgaxR7kJak6eBg2uU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/show_orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"show_orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "shipment_price",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1NjE0NTA1YTRjZWQ5YmY3MGM0YzYyM2E2MDZjYjZmOGVjNDEyMzc3MGY3MmU1ZWVmZTVjZjcyNDUwMTAwZTA5M2JlNmUzOGFmOWQxM2NlIn0.eyJhdWQiOiIyIiwianRpIjoiYTU2MTQ1MDVhNGNlZDliZjcwYzRjNjIzYTYwNmNiNmY4ZWM0MTIzNzcwZjcyZTVlZWZlNWNmNzI0NTAxMDBlMDkzYmU2ZTM4YWY5ZDEzY2UiLCJpYXQiOjE1NTcyMjcyODksIm5iZiI6MTU1NzIyNzI4OSwiZXhwIjoxNTU4NTIzMjg2LCJzdWIiOiIxODMiLCJzY29wZXMiOltdfQ.hVfPT1i57s_-KWhQ4-i0WVh8ettVgrVbNJv1odxitXYhs1yZqZHAk_guYAb-x3wYmiYqoFz4fgxJCjIopMVwbvYUQjhSoV-VwhmxGRQQIYhnwX5tF3vgeOMrE6EZ58WkmsFCFggZmVFFh1SNBHiIXr4bmLiTK5smou2xnggAdCmFOfuBNhnMns54sUlaYEjOMjl3l18BtwkAH5Z0u14tTJc0qEWvObtPF5H0ROmM72PMW7XFtiEZ-gg3ven6AVThUwSxjN4wC4sZ7ivW0Jcc7Qrndy_RU0mRmPRCZrUgH9tbmBPGevRgRCqsaYoNCGQyuekluAUIDgITBlk2Apzor4QUyi8DAIVOo4Txy5Mx29nJAvYw7e-TqlamYzhInMiVsnQOX4SUYB7G-8k7Jsc_GtUq1DjuSf2aWoKEo8uzWXQe0kk2qcZBjdvBklEqMdvMP9WbabRRXHnfNiPrp9l6R0Tej0eODiVY-iHTLAtzFm5vBqUKO-rMaERe061gYaYqDJsgsb4DD8L_UFEcev9VCPpu4ZtBzon9Mm2CQotnqBt8uCk3mb3pntzW5AGe0rW_DBrABFG1pqtcLmek8C35IJtR1DcpmIsQUN6kgo8hxiUYuCD3fPswJnKI_snHhUc6JAdp1RgVHD9eJi3q7ty_FS699VNgaxR7kJak6eBg2uU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "address_id",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/shipment_price",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"shipment_price"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check_copun",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1NjE0NTA1YTRjZWQ5YmY3MGM0YzYyM2E2MDZjYjZmOGVjNDEyMzc3MGY3MmU1ZWVmZTVjZjcyNDUwMTAwZTA5M2JlNmUzOGFmOWQxM2NlIn0.eyJhdWQiOiIyIiwianRpIjoiYTU2MTQ1MDVhNGNlZDliZjcwYzRjNjIzYTYwNmNiNmY4ZWM0MTIzNzcwZjcyZTVlZWZlNWNmNzI0NTAxMDBlMDkzYmU2ZTM4YWY5ZDEzY2UiLCJpYXQiOjE1NTcyMjcyODksIm5iZiI6MTU1NzIyNzI4OSwiZXhwIjoxNTU4NTIzMjg2LCJzdWIiOiIxODMiLCJzY29wZXMiOltdfQ.hVfPT1i57s_-KWhQ4-i0WVh8ettVgrVbNJv1odxitXYhs1yZqZHAk_guYAb-x3wYmiYqoFz4fgxJCjIopMVwbvYUQjhSoV-VwhmxGRQQIYhnwX5tF3vgeOMrE6EZ58WkmsFCFggZmVFFh1SNBHiIXr4bmLiTK5smou2xnggAdCmFOfuBNhnMns54sUlaYEjOMjl3l18BtwkAH5Z0u14tTJc0qEWvObtPF5H0ROmM72PMW7XFtiEZ-gg3ven6AVThUwSxjN4wC4sZ7ivW0Jcc7Qrndy_RU0mRmPRCZrUgH9tbmBPGevRgRCqsaYoNCGQyuekluAUIDgITBlk2Apzor4QUyi8DAIVOo4Txy5Mx29nJAvYw7e-TqlamYzhInMiVsnQOX4SUYB7G-8k7Jsc_GtUq1DjuSf2aWoKEo8uzWXQe0kk2qcZBjdvBklEqMdvMP9WbabRRXHnfNiPrp9l6R0Tej0eODiVY-iHTLAtzFm5vBqUKO-rMaERe061gYaYqDJsgsb4DD8L_UFEcev9VCPpu4ZtBzon9Mm2CQotnqBt8uCk3mb3pntzW5AGe0rW_DBrABFG1pqtcLmek8C35IJtR1DcpmIsQUN6kgo8hxiUYuCD3fPswJnKI_snHhUc6JAdp1RgVHD9eJi3q7ty_FS699VNgaxR7kJak6eBg2uU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "copun_code",
+									"value": "6dsf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/check_copun",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"check_copun"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order_details/25",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1NjE0NTA1YTRjZWQ5YmY3MGM0YzYyM2E2MDZjYjZmOGVjNDEyMzc3MGY3MmU1ZWVmZTVjZjcyNDUwMTAwZTA5M2JlNmUzOGFmOWQxM2NlIn0.eyJhdWQiOiIyIiwianRpIjoiYTU2MTQ1MDVhNGNlZDliZjcwYzRjNjIzYTYwNmNiNmY4ZWM0MTIzNzcwZjcyZTVlZWZlNWNmNzI0NTAxMDBlMDkzYmU2ZTM4YWY5ZDEzY2UiLCJpYXQiOjE1NTcyMjcyODksIm5iZiI6MTU1NzIyNzI4OSwiZXhwIjoxNTU4NTIzMjg2LCJzdWIiOiIxODMiLCJzY29wZXMiOltdfQ.hVfPT1i57s_-KWhQ4-i0WVh8ettVgrVbNJv1odxitXYhs1yZqZHAk_guYAb-x3wYmiYqoFz4fgxJCjIopMVwbvYUQjhSoV-VwhmxGRQQIYhnwX5tF3vgeOMrE6EZ58WkmsFCFggZmVFFh1SNBHiIXr4bmLiTK5smou2xnggAdCmFOfuBNhnMns54sUlaYEjOMjl3l18BtwkAH5Z0u14tTJc0qEWvObtPF5H0ROmM72PMW7XFtiEZ-gg3ven6AVThUwSxjN4wC4sZ7ivW0Jcc7Qrndy_RU0mRmPRCZrUgH9tbmBPGevRgRCqsaYoNCGQyuekluAUIDgITBlk2Apzor4QUyi8DAIVOo4Txy5Mx29nJAvYw7e-TqlamYzhInMiVsnQOX4SUYB7G-8k7Jsc_GtUq1DjuSf2aWoKEo8uzWXQe0kk2qcZBjdvBklEqMdvMP9WbabRRXHnfNiPrp9l6R0Tej0eODiVY-iHTLAtzFm5vBqUKO-rMaERe061gYaYqDJsgsb4DD8L_UFEcev9VCPpu4ZtBzon9Mm2CQotnqBt8uCk3mb3pntzW5AGe0rW_DBrABFG1pqtcLmek8C35IJtR1DcpmIsQUN6kgo8hxiUYuCD3fPswJnKI_snHhUc6JAdp1RgVHD9eJi3q7ty_FS699VNgaxR7kJak6eBg2uU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/canon/public/api/order_details/25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"canon",
+								"public",
+								"api",
+								"order_details",
+								"25"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
