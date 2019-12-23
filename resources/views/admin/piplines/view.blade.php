@@ -39,7 +39,7 @@
 <header class="main-heading">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 				<div class="page-icon">
 					<i class="icon-layers"></i>
 				</div>
@@ -52,10 +52,12 @@
 						</a>
 						@endif
 					</h5>
-
 				</div>
 			</div>
+
+
 		</div>
+
 	</div>
 </header>
 <!-- END: .main-heading -->
@@ -91,8 +93,8 @@
 
 									<button class="btn btn-gray mr-1">
 										<span class="gray-head">Stage : </span>
-										@if(count($opportunity->stages))
-										@foreach($opportunity->stages as $stage)
+										@if(count($opportunity->lastStage))
+										@foreach($opportunity->lastStage as $stage)
 										<td>{{$stage->name}}</td>
 										@endforeach
 										@else
@@ -124,6 +126,11 @@
 								<h6> Opportunity Services </h6>
 							</a>
 						</div>
+						@if(has_access('addService-opportunity'))
+						<a href="javascript:void(0);" class="btn btn-primary btn-sm  float-right addService" data-id="{{$opportunity->id}}">
+							<span class="icon-pencil"></span>Add Services
+						</a>
+						@endif
 
 					</div>
 					<div id="collapseFour" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
@@ -159,16 +166,19 @@
 						<div class="card-title">
 							<img src="{{url("admin/img/social-care.png")}}" class="card-icon">
 							<a class="collapsed" data-toggle="collapse" href="#collapseStage" aria-expanded="false" aria-controls="collapseFour">
-								<h6> Opportunity Stages </h6>
-								
+								<h6> Opportunity Stages
 
-						<a href="javascript:void(0);" class="btn btn-primary btn-sm  float-right editStage" data-id="{{$opportunity->id}}">
-							<span class="icon-pencil"></span>
-						</a>
-						
+								</h6>
+
+
 							</a>
-						</div>
 
+						</div>
+						@if(has_access('updateStage-opportunity'))
+						<a href="javascript:void(0);" class="btn btn-primary btn-sm  float-right editStage" data-id="{{$opportunity->id}}">
+							<span class="icon-pencil"></span>Change Stage
+						</a>
+						@endif
 					</div>
 					<div id="collapseStage" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
 						<div class="card-body p-0">
@@ -188,8 +198,13 @@
 									<tr>
 										<th scope="row">{{$key+1}}</th>
 										<td>{{$stage->name}} </td>
+										@if($stage->pivot->notes)
 										<td>{{$stage->pivot->notes}} </td>
 
+										@else
+										<td>{{$opportunity->notes}} </td>
+
+										@endif
 										<td>{{$stage->created_at}}</td>
 
 									</tr>
@@ -304,9 +319,9 @@
 
 
 		<!--Edit Opportunity-->
-<!--Edit Stage-->
+		<!--Edit Stage-->
 
-<div class="modal fade" id="editStageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal fade" id="editStageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -322,7 +337,7 @@
 							</div>
 							<input type="hidden" name="id" id="opportunity_id" value="{{$opportunity->id}}">
 
-                           
+
 
 
 							<div class="form-group">
@@ -336,7 +351,7 @@
 								</select>
 
 							</div>
-						
+
 							<div class="form-group">
 								<label for="notes"><strong>Notes</strong></label>
 								<textarea class="form-control" id="update_notes" rows="8" name="notes" placeholder="Notes">{{old('notes')}}</textarea>
@@ -355,6 +370,55 @@
 
 
 		<!--Edit Stage-->
+		<!--Add Service-->
+
+		<div class="modal fade" id="addServiceModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Add Service</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<form id="add_service_form">
+						<div class="modal-body">
+							<div class="error hidden">
+								<ul></ul>
+							</div>
+							<input type="hidden" name="id" id="opportunity_id" value="{{$opportunity->id}}">
+
+
+
+
+							<div class="form-group">
+								<label for="service_id"><strong>Service</strong><span style="color: red;"> * </span></label>
+
+								<select class="form-control validate[required]" id="services" name="services[]" multiple>
+									<option disabled>Select Services</option>
+									@if(!empty($services))
+									@foreach($services as $service)
+									<option value="{{$service->id}}" selected>{{$service->name}}</option>
+									@endforeach
+									@endif
+								</select>
+
+							</div>
+
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="submit" class="btn btn-primary">Save</button>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!--Add Service-->
 
 
 		<!-- END: .main-content -->

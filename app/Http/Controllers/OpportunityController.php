@@ -88,7 +88,6 @@ class OpportunityController extends Controller
 
         return response()->json(['success' => true, 'message' => $msg]);
     }
-
     /**
      * Display the specified resource.
      *
@@ -160,11 +159,36 @@ class OpportunityController extends Controller
         $valid = validator($request->all(), $validateData);
         if ($valid->fails())
             return response()->json(['success' => false, 'errors' => $valid->errors()->all()]);
+        $opportunity =   $this->opportunityRepo->find($id);
+        $result = $opportunity->update($request->all());
 
-        $result = $this->opportunityRepo->find($id)->update($request->all());
+        if (!empty($request['services']))
+            $opportunity->services()->sync($request['services']);
+
+        if (!empty($request['stage_id']))
+            $opportunity->stages()->sync($request['stage_id'], false);
         return response()->json(['success' => true, 'message' => $msg]);
     }
+    // 
+    public function addService(Request $request)
+    {
+        $msg  = 'Services Added Successfully';
+        $validateData = [
+            'services'   => 'required',
 
+        ];
+        $valid = validator($request->all(), $validateData);
+        if ($valid->fails())
+            return response()->json(['success' => false, 'errors' => $valid->errors()->all()]);
+        $opportunity =   $this->opportunityRepo->find($request->pipeline_id);
+
+
+        if (!empty($request['services']))
+            $opportunity->services()->sync($request['services'], false);
+
+
+        return response()->json(['success' => true, 'message' => $msg]);
+    }
     /**
      * Remove the specified resource from storage.
      *
@@ -173,16 +197,20 @@ class OpportunityController extends Controller
      */
     public function destroy($id)
     {
-        $msg  = 'Stage Deleted Successfully';
+        $msg  = 'Opportunity Deleted Successfully';
         $msg1 = 'Something Goes Wrong';
-        $msg2 = 'You Can\'t Delete Stage, This Stage Related To Other Tables';
+        $msg2 = 'You Can\'t Delete Opportunity, This Opportunity Related To Other Tables';
 
         if (!empty($id)) {
-            // $check = $this->stagesRepo->checkStage($id);
-            // if($check == true)
-            //     return response()->json(['success'=>false, 'message'=>$msg2]);
+            $check = $this->opportunityRepo->checkService($id);
+            if ($check == true)
+                return response()->json(['success' => false, 'message' => $msg2]);
 
-            if ($this->stagesRepo->find($id)->delete())
+            $checkstage = $this->opportunityRepo->checkStage($id);
+            if ($checkstage == true)
+                return response()->json(['success' => false, 'message' => $msg2]);
+
+            if ($this->opportunityRepo->find($id)->delete())
                 return response()->json(['success' => true, 'message' => $msg]);
         }
         return response()->json(['success' => false, 'message' => $msg1]);

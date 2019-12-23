@@ -69,16 +69,20 @@ if (!function_exists('get_module_names')) {
 if (!function_exists('get_pages_name')) {
     function get_pages_name()
     {
+        
         $modules = [];
         $pages = get_module_names();
         foreach ($pages as $key => $value) {
-            if (in_array($value, ['stage', 'customer','category','service','opportunity'])) {
+            if (in_array($value, ['stage', 'customer','category','service'])) {
                 $modules[$value] = ['view' => 'view', 'add' => 'add', 'edit' => 'edit', 'delete' => 'delete'];
             } elseif (in_array($value, ['dashboard'])) {
                 $modules[$value] = ['view' => 'view'];
             } 
             elseif ($value == 'employee') {
                 $modules[$value] = ['view' => 'view', 'add' => 'add', 'edit' => 'edit', 'delete' => 'delete', 'addPermission' => 'permissions'];
+            }
+            elseif ($value == 'opportunity') {
+                $modules[$value] = ['view' => 'view', 'add' => 'add', 'edit' => 'edit', 'delete' => 'delete', 'updateStage' => 'updateStage','addService'=>'addService'];
             }
         }
         return ($modules);

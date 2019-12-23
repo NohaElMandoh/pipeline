@@ -118,10 +118,11 @@ class CustomerController extends Controller
         $msg2 = 'You Can\'t Delete Customer, This Customer Related To Other Tables';
 
         if(!empty($id)){
-            // $check        = $this->customerRepo->checkProject($id);
-            // $checkEndUser = $this->customerRepo->checkEndUser($id);
-            // if($check == true || $checkEndUser == true)
-            //     return response()->json(['success'=>false, 'message'=>$msg2]);
+            // $check        = $this->customerRepo->checkPipeline($id);
+            $checkContact = $this->customerRepo->checkContact($id);
+            // return ($this->customerRepo->find($id));
+            if($checkContact==true )
+                return response()->json(['success'=>false, 'message'=>$msg2]);
 
             if($this->customerRepo->find($id)->delete())
                 return response()->json(['success'=>true, 'message'=>$msg]);

@@ -93,15 +93,28 @@
 						</a>
 				</li>
 				@endif
-				{{-- <li >
-						<a href='#'>
-						<span class="has-icon">
-							<i class="icon-flash-outline"></i>
-						</span>
-							<span class="nav-title">Reports</span>
-						</a>
-					</li>
-					--}}
+				<li class="@if(Request::is('admin/Reports') == true) active selected @endif">
+					<a href="#" class="has-arrow" aria-expanded="false">
+					<span class="has-icon">
+						<i class="icon-laptop_windows"></i>
+					</span>
+						<span class="nav-title">Reports</span>
+					</a>
+					<ul aria-expanded="false" class="@if(Request::is('admin/Reports')) collapse in @endif">
+						
+						<li>
+							<a href='{{route("report.index")}}' >Customers Opportunity /a>
+						</li>
+						<li>
+							<a href='#' >Month Opportunity /a>
+						</li>
+						<li>
+							<a href='#' >Status Opportunity /a>
+						</li>
+
+					</ul>
+				</li>
+		
 
 
 			</ul>

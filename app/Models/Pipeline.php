@@ -26,4 +26,8 @@ class Pipeline extends Model
     {
         return $this->belongsTo('App\Models\User', 'user_id');
     }
+    public function lastStage()
+    {
+        return $this->stages()->limit(1);
+    }
 }

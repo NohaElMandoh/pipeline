@@ -14,5 +14,7 @@ class PipelineRepository extends AbstractModelRepository implements PipelineInte
         $this->PipelineModel=$model;
         parent::__construct($model);
     }
+
+    
    
 }

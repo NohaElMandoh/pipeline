@@ -5,6 +5,7 @@
             <th>Title</th>
             <th>Customer</th>
             <th>Current Stage</th>
+            <th>Expected Closed Date</th>
             <th>Created At</th>
             <th>Updated At</th>
             @if(has_access('delete-opportunity') || has_access('edit-opportunity'))
@@ -22,8 +23,8 @@
             <td>{{$opportunity->title}}</td>
             <td>{{$opportunity->customer->name}}</td>
 
-            @if(count($opportunity->stages))
-            @foreach($opportunity->stages as $key=>$stage)
+            @if(count($opportunity->lastStage))
+            @foreach($opportunity->lastStage as $key=>$stage)
             <td>{{$stage->name}}</td>
             @endforeach
             @else
@@ -31,15 +32,19 @@
 
             @endif
 
+            <td>{{ date('d-m-Y h:i A',strtotime($opportunity->expected_closed_date)) }}</td>
            
             <td>{{ date('d-m-Y h:i A',strtotime($opportunity->created_at)) }}</td>
             <td>{{ date('d-m-Y h:i A',strtotime($opportunity->updated_at))}}</td>
-            @if(has_access('delete-opportunity') || has_access('edit-opportunity'))
+            @if(has_access('delete-opportunity') || has_access('edit-opportunity') || has_access('view-opportunity'))
 
             <td>
+            @if(has_access('edit-opportunity'))
+
             <a href='{{ route("opportunities.show",$opportunity->id) }}' class="btn btn-info btn-sm">
 										<i class="fa fa-eye"></i>
-									</a>
+                                    </a>
+                                    @endif
                 @if(has_access('edit-opportunity'))
 
                 <a href="javascript:void(0);" class="btn btn-primary btn-sm edit" data-id="{{$opportunity->id}}">
@@ -48,7 +53,7 @@
                 @endif
                 @if(has_access('delete-opportunity') )
 
-                <a href="javascript:void(0);" class="btn btn-danger btn-sm deletej" onclick="deleteService({{$opportunity->id}});" data-id="{{$opportunity->id}}">
+                <a href="javascript:void(0);" class="btn btn-danger btn-sm deletej" onclick="deleteOpportunity({{$opportunity->id}});" data-id="{{$opportunity->id}}">
                     <i class="fa fa-trash"></i>
                 </a>
 

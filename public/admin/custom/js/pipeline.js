@@ -30,7 +30,17 @@ $(document).ready(function () {
         $("#edit_stage_form").validationEngine();
     });
 
-    
+    $(document).on('click', '.addService', function (e) {
+        e.preventDefault();
+        var id = $(this).data('opportunity_id');
+        // getData(id);
+   
+        $('#addServiceModal').modal('show');
+        $('.error').addClass('hidden');
+
+        $("#add_service_form").validationEngine();
+    });
+
 
     $(document).on('submit', '#add_form', function (e) {
         e.preventDefault();
@@ -84,6 +94,23 @@ $(document).ready(function () {
 
         editForm(e, id, url, method, data, modal)
     });
+    $(document).on('submit', '#add_service_form', function (e) {
+        e.preventDefault();
+        var id = $('#opportunity_id').val(),
+            method = 'POST',
+            url = base_url + '/admin/opportunity/addService',
+            data = {
+                'pipeline_id': $('#opportunity_id').val(),
+                'services': $('#services').val(),
+
+                
+            },
+            modal = '#addServiceModal';
+
+        editForm(e, id, url, method, data, modal)
+    });
+
+    
 });
 function getData(id) {
     // console.log (id); 
@@ -106,15 +133,6 @@ function getData(id) {
         }
     });
 }
-function deleteStage(id) {
-    deleteData(id, 'Are You Sure Delete This Stage?', base_url + '/admin/stages/' + id);
-}
-function getHomeData() {
-    $.ajax({
-        url: base_url + '/admin/stages',
-        type: 'GET',
-        success: function (data) {
-            $('#table-body').html(data);
-        }
-    });
+function deleteOpportunity(id) {
+    deleteData(id, 'Are You Sure Delete This Opportunity?', base_url + '/admin/opportunities/' + id);
 }
