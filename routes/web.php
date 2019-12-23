@@ -55,15 +55,15 @@ Route::group(['prefix' => 'admin'], function () {
 
 
         Route::resource('opportunities', 'OpportunityController')->except('store','update','updateStage');
+        Route::post('opportunities', 'OpportunityController@store');
         Route::get('opportunities/getAjaxRequest/{id}', 'OpportunityController@getAjaxRequest');
         Route::post('opportunity/updateStage', 'OpportunityController@updateStage');
         Route::post('opportunity/addService', 'OpportunityController@addService');
 
         Route::post('opportunity/{id}', 'OpportunityController@update')->name('admin.opportunity.update'); // add employee
 
+        Route::resource('reports', 'ReportController');
         
-        Route::post('opportunities', 'OpportunityController@store');
-
 
         
         Route::resource('role', 'RoleController');

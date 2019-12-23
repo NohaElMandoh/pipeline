@@ -11,6 +11,7 @@ $(document).ready(function () {
         e.preventDefault();
         var id = $(this).data('id');
         getData(id);
+   
         $('#editModal').modal('show');
         $('.error').addClass('hidden');
         $("#edit_form").validationEngine();
@@ -47,16 +48,16 @@ $(document).ready(function () {
             data = {
                 'id': $('#edit_id').val(),
                 'name': $('#edit_name').val(),
-                'title': $('#title').val(),
-                'email': $('#email').val(),
-                'mobile': $('#mobile').val(),
-                'phone': $('#phone').val(),
-                'location': $('#location').val(),
-                'type': $('#type').val(),
-                'website': $('#website').val(),
-                'facebook': $('#facebook').val(),
-                'instagram': $('#instagram').val(),
-                'linkedin': $('#linkedin').val(),
+                'title': $('#edit_title').val(),
+                'email': $('#edit_email').val(),
+                'mobile': $('#edit_mobile').val(),
+                'phone': $('#edit_phone').val(),
+                'location': $('#edit_location').val(),
+                'type': $('#edit_type').val(),
+                'website': $('#edit_website').val(),
+                'facebook': $('#edit_facebook').val(),
+                'instagram': $('#edit_instagram').val(),
+                'linkedin': $('#edit_linkedin').val(),
 
             
             },

@@ -15,3 +15,6 @@
 <!-- jQuery-Validation-Engine -->
  <link rel="stylesheet" href="{{ asset('admin/vendor/validateJquery/css/validationEngine.jquery.css')}}" type="text/css"/>
  <link rel="stylesheet" href="{{ asset('admin/custom/css/custom.css')}}">
+
+ <!--Timeline-->
+ <link href="{{ asset('admin/custom/timeline/css/timeline.min.css')}}" rel="stylesheet" />

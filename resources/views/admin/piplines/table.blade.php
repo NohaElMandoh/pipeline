@@ -21,7 +21,13 @@
         <tr data-id="{{$opportunity->id}}" id="id{{$opportunity->id}}">
             <td>{!!$loop->iteration??'<%counter%>' !!}</td>
             <td>{{$opportunity->title}}</td>
+            @if(!empty($opportunity->customer))
+
             <td>{{$opportunity->customer->name}}</td>
+            @else
+            <td></td>
+
+@endif
 
             @if(count($opportunity->lastStage))
             @foreach($opportunity->lastStage as $key=>$stage)
@@ -29,7 +35,6 @@
             @endforeach
             @else
             <td></td>
-
             @endif
 
             <td>{{ date('d-m-Y h:i A',strtotime($opportunity->expected_closed_date)) }}</td>

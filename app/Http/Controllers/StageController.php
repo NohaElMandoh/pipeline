@@ -120,9 +120,9 @@ class StageController extends Controller
         $msg2 = 'You Can\'t Delete Stage, This Stage Related To Other Tables';
 
         if (!empty($id)) {
-            // $check = $this->stagesRepo->checkStage($id);
-            // if($check == true)
-            //     return response()->json(['success'=>false, 'message'=>$msg2]);
+            $check = $this->stagesRepo->checkPipeline($id);
+            if($check == true)
+                return response()->json(['success'=>false, 'message'=>$msg2]);
 
             if ($this->stagesRepo->find($id)->delete())
                 return response()->json(['success' => true, 'message' => $msg]);

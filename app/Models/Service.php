@@ -14,5 +14,8 @@ class Service extends Model
     {
         return $this->belongsTo('App\Models\Category', 'category_id');
     }
-
+    public function pipelines()
+    {
+        return $this->belongsToMany('App\Models\Pipeline', 'pipeline_service', 'service_id', 'pipeline_id');
+    }
 }

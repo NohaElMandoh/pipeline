@@ -75,14 +75,6 @@ function getData(id){
     });
 }
 function deleteService(id){
-    deleteData(id, 'Are You Sure Delete This Service?', base_url +'/admin/service/'+id);
-}
-function getHomeData(){
-    $.ajax({
-        url: base_url + '/admin/services',
-        type:'GET',
-        success : function(data){
-            $('#table-body').html(data);
-        }
-    });
+ 
+    deleteData(id, 'Are You Sure Delete This Service?', base_url +'/admin/services/'+id);
 }

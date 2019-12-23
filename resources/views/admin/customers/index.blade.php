@@ -138,7 +138,7 @@
 					<div class="error hidden">
                       <ul></ul>
                     </div>
-                    <input type="hidden" name="id"  id="edit_id">
+                    <input type="hidden" name="id"  id="edit_id" >
 
 					<div class="form-group">
 						<label for="edit_name" class="col-form-label">Name:</label>
@@ -168,27 +168,27 @@
                     </div>
                     <div class="form-group">
                         <label for="edit_phone" class="col-form-label">Phone:</label>
-                        <input type="text" class="form-control validate[required]" name="edit_phone"id="edit_phone" placeholder="Phone">
+                        <input type="text" class="form-control " name="edit_phone"id="edit_phone" placeholder="Phone">
                     </div>
                     <div class="form-group">
                         <label for="edit_location" class="col-form-label">Location:</label>
-                        <input type="text" class="form-control validate[required]"name="edit_location" id="edit_location" placeholder="Location">
+                        <input type="text" class="form-control "name="edit_location" id="edit_location" placeholder="Location">
                     </div>
                     <div class="form-group">
                         <label for="edit_website" class="col-form-label">Website:</label>
-                        <input type="text" class="form-control validate[required]" name="edit_website"id="edit_website" placeholder="Website">
+                        <input type="text" class="form-control" name="edit_website"id="edit_website" placeholder="Website">
                     </div>
                     <div class="form-group">
                         <label for="edit_acebook" class="col-form-label">Facebook:</label>
-                        <input type="text" class="form-control validate[required]" name="edit_acebook"id="edit_acebook" placeholder="Facebook">
+                        <input type="text" class="form-control " name="edit_acebook"id="edit_acebook" placeholder="Facebook">
                     </div>
                     <div class="form-group">
                         <label for="edit_instagram" class="col-form-label">Instagram:</label>
-                        <input type="text" class="form-control validate[required]" name="edit_instagram" id="edit_instagram" placeholder="Instagram">
+                        <input type="text" class="form-control " name="edit_instagram" id="edit_instagram" placeholder="Instagram">
                     </div>
                     <div class="form-group">
                         <label for="edit_linkedin" class="col-form-label">Linkedin:</label>
-                        <input type="text" class="form-control validate[required]" name="edit_linkedin" id="edit_linkedin" placeholder="Linkedin">
+                        <input type="text" class="form-control " name="edit_linkedin" id="edit_linkedin" placeholder="Linkedin">
                     </div>
   				</div>
 				<div class="modal-footer">

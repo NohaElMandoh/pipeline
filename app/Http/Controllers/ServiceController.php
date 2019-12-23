@@ -129,9 +129,9 @@ class ServiceController extends Controller
         $msg2 = 'You Can\'t Delete Service, This Service Related To Other Tables';
 
         if(!empty($id)){
-            // $check = $this->servicesRepo->checkStage($id);
-            // if($check == true)
-            //     return response()->json(['success'=>false, 'message'=>$msg2]);
+            $check = $this->servicesRepo->checkPipeline($id);
+            if($check == true)
+                return response()->json(['success'=>false, 'message'=>$msg2]);
 
             if($this->servicesRepo->find($id)->delete())
                 return response()->json(['success'=>true, 'message'=>$msg]);

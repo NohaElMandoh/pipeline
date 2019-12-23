@@ -47,6 +47,7 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
+        
         $validateData = ['name'=> 'required|unique:customers,name,NULL,id,deleted_at,NULL',];
         $valid = validator($request->all(), $validateData);
         if ($valid->fails())
@@ -67,8 +68,8 @@ class CustomerController extends Controller
     public function show($id)
     {
         if (!empty($id)) {
-            $service = $this->customerRepo->find($id);
-            return response()->json(['success' => true, 'service' => $service]);
+            $customer = $this->customerRepo->findWithRelation($id,['pipeline']);
+            return response()->json(['success' => true, 'customer' => $customer]);
         }
         return response()->json(['success' => false, 'errors' => [0 => 'Not Found Data']]);
     }
@@ -95,7 +96,7 @@ class CustomerController extends Controller
     {
         $msg  = 'Customer Updated Successfully';
         $validateData = [
-            'name'   => 'required|unique:customets,name,' . $id . ',id,deleted_at,NULL',
+            'name'   => 'required|unique:customers,name,' . $id . ',id,deleted_at,NULL',
 
         ];
         $valid = validator($request->all(), $validateData);
@@ -118,10 +119,13 @@ class CustomerController extends Controller
         $msg2 = 'You Can\'t Delete Customer, This Customer Related To Other Tables';
 
         if(!empty($id)){
-            // $check        = $this->customerRepo->checkPipeline($id);
+            $check        = $this->customerRepo->checkPipeline($id);
             $checkContact = $this->customerRepo->checkContact($id);
-            // return ($this->customerRepo->find($id));
-            if($checkContact==true )
+         
+       
+        
+
+            if($check==true || $checkContact ==true)
                 return response()->json(['success'=>false, 'message'=>$msg2]);
 
             if($this->customerRepo->find($id)->delete())

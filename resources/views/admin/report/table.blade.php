@@ -2,58 +2,53 @@
     <thead>
         <tr>
             <th>#</th>
-            <th>Name</th>
-            <th>Notes</th>
+            <th>Title</th>
+            <th>Customer</th>
+            <th>Current Stage</th>
+            <th>Expected Closed Date</th>
             <th>Created At</th>
             <th>Updated At</th>
-            @if(has_access('delete-stage') || has_access('edit-stage'))
-
-            <th>Action</th>
-            @endif
         </tr>
     </thead>
     <tbody>
-        @if(count($stages))
-        @foreach($stages as $stage)
-        <tr data-id="{{$stage->id}}" id="id{{$stage->id}}">
+        @if(count($opportunities))
+        @foreach($opportunities as $opportunity)
+        <tr data-id="{{$opportunity->id}}" id="id{{$opportunity->id}}">
             <td>{!!$loop->iteration??'<%counter%>' !!}</td>
+            <td>{{$opportunity->title}}</td>
+            <td>{{$opportunity->customer->name}}</td>
+
+            @if(count($opportunity->lastStage))
+            @foreach($opportunity->lastStage as $key=>$stage)
             <td>{{$stage->name}}</td>
-            <td>{{$stage->notes}}</td>
-            <td>{{ date('d-m-Y h:i A',strtotime($stage->created_at)) }}</td>
-            <td>{{ date('d-m-Y h:i A',strtotime($stage->updated_at))}}</td>
-            @if(has_access('delete-stage') || has_access('edit-stage'))
+            @endforeach
+            @else
+            <td></td>
 
-            <td>
-                @if(has_access('edit-stage'))
-
-                <a href="javascript:void(0);" class="btn btn-primary btn-sm edit" data-id="{{$stage->id}}">
-                    <span class="icon-pencil"></span>
-                </a>
-                @endif
-                @if(has_access('delete-stage') )
-
-                <a href="javascript:void(0);" class="btn btn-danger btn-sm deletej" onclick="deleteStage({{$stage->id}});" data-id="{{$stage->id}}">
-                    <i class="fa fa-trash"></i>
-                </a>
-                @endif
-            </td>
             @endif
+
+            <td>{{ date('d-m-Y h:i A',strtotime($opportunity->expected_closed_date)) }}</td>
+            <td>{{ date('d-m-Y h:i A',strtotime($opportunity->created_at)) }}</td>
+            <td>{{ date('d-m-Y h:i A',strtotime($opportunity->updated_at))}}</td>
+          
         </tr>
         @endforeach
-
         @endif
     </tbody>
 </table>
-<!-- 
-<script type="text/javascript">
+
+<!-- <script type="text/javascript">
     $(function() {
         var table = $('#basicExample').DataTable({
-          
+
+            //ordering: [],
             order: [],
-            bDestroy: true,
+            Destroy: true,
+
+
         });
     });
 </script>
 <script src="{{ asset('admin/js/jquery.js') }}"></script>
 <script src="{{ asset('admin/vendor/datatables/dataTables.min.js') }}"></script>
-<script src="{{asset('admin/custom/js/stage.js')}}"></script> -->
+<script src="{{asset('admin/custom/js/service.js')}}"></script> -->

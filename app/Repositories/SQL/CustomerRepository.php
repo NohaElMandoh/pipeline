@@ -16,12 +16,18 @@ class CustomerRepository extends AbstractModelRepository implements CustomerInte
         parent::__construct($model);
     }
     public function checkPipeline($id){
-        $pipeline = $this->CustomerModel->has('pipeline')->first();
-        return (!empty($pipeline))? true : false;
+     
+        $customer = $this->CustomerModel->where('id',$id)->with('pipeline')->get();
+        foreach($customer as $c)
+        return (count($c->pipeline) !=0)? true : false;
     }
     public function checkContact($id){
-        $contact = $this->CustomerModel->has('contact')->first();
-        return (!empty($contact))? true : false;
+
+        $customer = $this->CustomerModel->where('id',$id)->with('contact')->get();
+        foreach($customer as $c)
+    
+
+        return (count($c->contact) !=0)? true : false;
     }
     
 }

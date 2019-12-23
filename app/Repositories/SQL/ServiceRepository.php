@@ -14,5 +14,10 @@ class ServiceRepository extends AbstractModelRepository implements ServiceInterf
         $this->ServiceModel=$model;
         parent::__construct($model);
     }
-   
+    public function checkPipeline($id){
+     
+        $service = $this->ServiceModel->where('id',$id)->with('pipelines')->get();
+        foreach($service as $s)
+        return (count($s->pipelines) !=0)? true : false;
+    }
 }

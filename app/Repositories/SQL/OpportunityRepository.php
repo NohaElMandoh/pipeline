@@ -15,12 +15,17 @@ class OpportunityRepository extends AbstractModelRepository implements Opportuni
         parent::__construct($model);
     }
     public function checkService($id){
-        $service = $this->opportunityModel->has('services')->first();
-        return (!empty($service))? true : false;
+        $service = $this->opportunityModel->where('id',$id)->with('services')->get();
+        foreach($service as $s)
+        return (count($s->services) !=0)? true : false;
     }
     public function checkStage($id){
-        $stage = $this->opportunityModel->has('stages')->first();
-        return (!empty($stage))? true : false;
+        $stage = $this->opportunityModel->where('id',$id)->with('stages')->get();
+        foreach($stage as $s)
+        return (count($s->stages) !=0)? true : false;
+        
     }
+
+    
     
 }
